@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "842966680924",
+    "project_id": "fisiohome-58a05",
+    "storage_bucket": "fisiohome-58a05.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:842966680924:android:d895740214dea6aaa52d99",
+        "android_client_info": {
+          "package_name": "com.fisiohome.apps"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "842966680924-er2tjcdlu0q1neakb9718cfcqk97irvt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.fisiohome.apps",
+            "certificate_hash": "1dff64c71d7ae296e1cbdefed2c41ea39dc020d2"
+          }
+        },
+        {
+          "client_id": "842966680924-f51qfgschgmah3ldtii5ogttgn5ppf6a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBx7ATYq1FHEdxFQ1B1JZC-rVICPCSzW-I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "842966680924-f51qfgschgmah3ldtii5ogttgn5ppf6a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
