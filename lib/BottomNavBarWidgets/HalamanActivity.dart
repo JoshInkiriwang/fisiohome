@@ -27,6 +27,7 @@ class HalamanActivity extends StatelessWidget {
         backgroundColor: ColorPalette.appBarColor,
       ),
       body: ListView(
+        padding: EdgeInsets.only(left: 15, right: 15),
         children: [
           CardVisit(),
           CardPaket(),
@@ -46,12 +47,15 @@ class CardVisit extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       child: ListTile(
-        leading: MaterialButton(
-          onPressed: () {},
-          color: ActivityPageColor.blendingCircleBorder,
-          child: Image.asset('icons/IconVisit.png'),
-          padding: EdgeInsets.all(16),
-          shape: CircleBorder(),
+        leading: ElevatedButton(
+          onPressed: () => Navigator.push(
+              context, MaterialPageRoute(builder: (context) => HalamanVisit())),
+          child: Image.asset('assets/icons/IconVisit.png'),
+          style: ElevatedButton.styleFrom(
+            shape: CircleBorder(),
+            padding: EdgeInsets.all(16),
+            primary: ActivityPageColor.blendingCircleBorder,
+          ),
         ),
         title: Text('Visit', style: ActivityPageTextStyle.titlecard),
         trailing: Icon(
@@ -71,12 +75,15 @@ class CardPaket extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       child: ListTile(
-        leading: MaterialButton(
-          onPressed: () {},
-          color: ActivityPageColor.blendingCircleBorder,
-          child: Image.asset('icons/IconPaket.png'),
-          padding: EdgeInsets.all(16),
-          shape: CircleBorder(),
+        leading: ElevatedButton(
+          onPressed: () => Navigator.push(
+              context, MaterialPageRoute(builder: (context) => HalamanPaket())),
+          child: Image.asset('assets/icons/IconPaket.png'),
+          style: ElevatedButton.styleFrom(
+            shape: CircleBorder(),
+            padding: EdgeInsets.all(16),
+            primary: ActivityPageColor.blendingCircleBorder,
+          ),
         ),
         title: Text('Paket', style: ActivityPageTextStyle.titlecard),
         trailing: Icon(Icons.arrow_forward_ios_sharp,
@@ -94,12 +101,15 @@ class CardKonsultasi extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       child: ListTile(
-        leading: MaterialButton(
-          onPressed: () {},
-          color: ActivityPageColor.blendingCircleBorder,
-          child: Image.asset('icons/IconKonsultasi.png'),
-          padding: EdgeInsets.all(16),
-          shape: CircleBorder(),
+        leading: ElevatedButton(
+          onPressed: () => Navigator.push(
+              context, MaterialPageRoute(builder: (context) => HalamanKonsultasi())),
+          child: Image.asset('assets/icons/IconKonsultasi.png'),
+          style: ElevatedButton.styleFrom(
+            shape: CircleBorder(),
+            padding: EdgeInsets.all(16),
+            primary: ActivityPageColor.blendingCircleBorder,
+          ),
         ),
         title: Text('Konsultasi', style: ActivityPageTextStyle.titlecard),
         trailing: Icon(Icons.arrow_forward_ios_sharp,
@@ -117,12 +127,15 @@ class CardLifestyle extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       child: ListTile(
-        leading: MaterialButton(
-          onPressed: () {},
-          color: ActivityPageColor.blendingCircleBorder,
-          child: Image.asset('icons/IconLifestyle.png'),
-          padding: EdgeInsets.all(16),
-          shape: CircleBorder(),
+        leading: ElevatedButton(
+          onPressed: () => Navigator.push(
+              context, MaterialPageRoute(builder: (context) => HalamanLifestyle())),
+          child: Image.asset('assets/icons/IconLifestyle.png'),
+          style: ElevatedButton.styleFrom(
+            shape: CircleBorder(),
+            padding: EdgeInsets.all(16),
+            primary: ActivityPageColor.blendingCircleBorder,
+          ),
         ),
         title: Text('Lifestyle', style: ActivityPageTextStyle.titlecard),
         trailing: Icon(Icons.arrow_forward_ios_sharp,
@@ -140,12 +153,15 @@ class CardRiwayat extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       child: ListTile(
-        leading: MaterialButton(
-          onPressed: () {},
-          color: ActivityPageColor.blendingCircleBorder,
-          child: Image.asset('icons/IconRiwayat.png'),
-          padding: EdgeInsets.all(16),
-          shape: CircleBorder(),
+        leading: ElevatedButton(
+          onPressed: () => Navigator.push(
+              context, MaterialPageRoute(builder: (context) => HalamanRiwayat())),
+          child: Image.asset('assets/icons/IconRiwayat.png'),
+          style: ElevatedButton.styleFrom(
+            shape: CircleBorder(),
+            padding: EdgeInsets.all(16),
+            primary: ActivityPageColor.blendingCircleBorder,
+          ),
         ),
         title: Text('Riwayat', style: ActivityPageTextStyle.titlecard),
         trailing: Icon(Icons.arrow_forward_ios_sharp,

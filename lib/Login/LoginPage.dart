@@ -22,6 +22,7 @@ class _LoginPageState extends State<LoginPage> {
   bool _obsecureText = true;
 
   String password = '';
+  String email = '';
 
   // Toggles the password show status
   void _toggle() {
@@ -34,10 +35,10 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        padding: EdgeInsets.all(20),
+       padding: EdgeInsets.all(30),
         child: Column(
           children: <Widget>[
-            SizedBox(height: 120.0), // <= Spacing
+            SizedBox(height: 40.0), // <= Spacing
             //Judul
             Text(
               'Selamat Datang',
@@ -49,7 +50,8 @@ class _LoginPageState extends State<LoginPage> {
               'Isi informasi dibawah ini untuk Login',
               style: LoginStyle.deskripsi,
             ),
-            SizedBox(height: 35.0), // <= Spacing
+            SizedBox(height: 20.0), // <= Spacing
+
             //FormField (Email)
             TextFormField(
               keyboardType: TextInputType.emailAddress,
@@ -58,6 +60,7 @@ class _LoginPageState extends State<LoginPage> {
                 labelText: "Email Address",
                 hintText: "Enter your email address",
               ),
+
             ),
             SizedBox(height: 20.0), // <= Spacing
             //FormField (Password)
@@ -92,7 +95,7 @@ class _LoginPageState extends State<LoginPage> {
                   style: LoginStyle.buttoninfo, //Text Color
                 ),
                 style: TextButton.styleFrom(
-                  backgroundColor: LoginColor.button_color, //Button Color
+                  backgroundColor: LoginColor.warnaungu, //Button Color
                 ),
               ),
             ),
@@ -101,11 +104,11 @@ class _LoginPageState extends State<LoginPage> {
                 text: new TextSpan(children: [
               new TextSpan(
                 text: 'Belum Mendaftar ? ',
-                style: new TextStyle(color: Colors.black),
+                style: LoginStyle.belummendaftar,
               ),
               new TextSpan(
                 text: 'Daftar disini',
-                style: new TextStyle(color: Colors.blue),
+                style: LoginStyle.daftardisini,
                 recognizer: new TapGestureRecognizer()
                   ..onTap = () {
                     Navigator.pushReplacement(

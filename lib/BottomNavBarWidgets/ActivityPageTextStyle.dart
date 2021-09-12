@@ -4,7 +4,7 @@ import 'ActivityPageColor.dart';
 class ActivityPageTextStyle {
   // Activity Page TextStyle
   static const AppBar_Aktivitas =
-      TextStyle(fontSize: 14, fontWeight: FontWeight.w700, height: 18);
+      TextStyle(fontSize: 14, fontWeight: FontWeight.w700);
 
   static const titlecard = TextStyle(
       fontSize: 16,

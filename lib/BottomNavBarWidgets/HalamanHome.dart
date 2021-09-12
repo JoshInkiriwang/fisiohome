@@ -1,47 +1,32 @@
+import 'package:apps/BottomNavBarWidgets/SearchBar.dart';
 import 'package:flutter/material.dart';
 
 void main() {
   runApp(new MaterialApp(
-    title: 'Home',
-    home: new HalamanHome(),
+    theme: ThemeData(fontFamily: 'Raleway'),
   ));
 }
 
-class HalamanHome extends StatelessWidget {
+class HalamanHome extends StatefulWidget {
+  _HalamanHomeState createState() => _HalamanHomeState();
+}
+
+class _HalamanHomeState extends State<HalamanHome> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SearchField(),
+    return SizedBox(
+      height: 300,
+      child: Stack(
+        fit: StackFit.expand,
+        children: [
+          Image.asset('assets/images/HomePage.jpg', fit: BoxFit.contain,),
+          ClipRect(
+            child: Container(
+              child: SearchBar(),
+            ),
+          )
+        ],
+      ),
     );
-  }
-}
-
-class SearchField extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-        body: Padding(
-            padding: EdgeInsets.fromLTRB(20.0, 30.0, 20.0, 3.0),
-            child: TextField(
-              decoration: InputDecoration(
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(25.0),
-                  ),
-                  suffixIcon: Icon(Icons.search_rounded),
-                  filled: true,
-                  hintStyle: TextStyle(
-                      color: Color.fromRGBO(15, 15, 15, 100),
-                      fontFamily: 'Raleway',
-                      fontSize: 14),
-                  hintText: 'Search',
-                  fillColor: Colors.white70),
-            )));
-  }
-}
-
-class FourButtons extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold();
   }
 }

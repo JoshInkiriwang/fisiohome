@@ -1,15 +1,6 @@
 import 'package:flutter/material.dart';
 import 'RegisterStyle.dart';
 
-void main() {
-  runApp(
-    new MaterialApp(
-      home: RegisterPage(),
-      theme: ThemeData(fontFamily: 'Raleway'),
-    ),
-  );
-}
-
 class RegisterPage extends StatefulWidget {
   _RegisterPageState createState() => _RegisterPageState();
 }
@@ -34,11 +25,6 @@ class _RegisterPageState extends State<RegisterPage> {
               'Isi informasi dibawah ini untuk Sign Up',
               style: RegisterStyle.deskripsi,
             ),
-            SizedBox(height: 20.0), // <= Spacing
-            //FormField (Nama Lengkap)
-            TextFormField(
-                keyboardType: TextInputType.name,
-                decoration: InputDecoration(labelText: "Nama Lengkap")),
             SizedBox(height: 20.0),
             //FormField (Email)
             TextFormField(
