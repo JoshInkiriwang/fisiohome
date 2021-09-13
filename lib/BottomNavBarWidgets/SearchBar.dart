@@ -16,7 +16,7 @@ class SearchBar extends StatelessWidget {
           suffixIcon: Icon(Icons.search_rounded),
           filled: true,
           hintText: 'Search',
-          fillColor: Color.fromRGBO(251, 252, 255, 100),
+          fillColor: Colors.white,
           hintStyle: TextStyle(
             color: Color.fromRGBO(15, 15, 15, 100),
             fontSize: 14,
