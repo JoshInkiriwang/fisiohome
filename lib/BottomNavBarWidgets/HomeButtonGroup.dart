@@ -4,41 +4,20 @@ import 'package:flutter/material.dart';
 class HomeButtonGroup extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Padding(
-        padding: EdgeInsets.all(10),
-        child: Container(
-          height: 50,
-          padding: EdgeInsets.all(3.5),
-          width: MediaQuery.of(context).size.width*0.9,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.all(Radius.circular(25)),
+    return Container(
+      height: 50,
+      width: 328,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(5),
+        color: Colors.white,
+      ),
+      child: Row(
+        children: <Widget>[
+          Expanded(
+            child: Image.asset('assets/icons/Scan.png')
           ),
-          child: Row(
-            children: <Widget>[
-              Expanded(
-                child: InkWell(
-                  onTap: () {},
-                  child: Icon(Icons.qr_code_scanner_outlined),
-                ),
-              ),
-              Padding(
-                  padding: EdgeInsets.symmetric(vertical: 0.1),
-                  child: Container(color: Colors.black, width: 2)),
-              Expanded(
-                child: Text('   Rp. 200.000')
-              ),
-              Padding(
-                  padding: EdgeInsets.symmetric(vertical: 0.1),
-                  child: Container(color: Colors.black, width: 2)),
-              Expanded(
-                child: Text('   172 Koin'),
-              ),
-            ],
-          ),
-        ),
+        ],
       ),
     );
   }
-
 }

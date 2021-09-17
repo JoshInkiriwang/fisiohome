@@ -1,4 +1,4 @@
-import 'package:apps/BottomNavBarWidgets/HomeButtonGroup.dart';
+import 'package:apps/BottomNavBarWidgets/FourButtons.dart';
 import 'package:apps/BottomNavBarWidgets/SearchBar.dart';
 import 'package:flutter/material.dart';
 
@@ -29,8 +29,8 @@ class _HalamanHomeState extends State<HalamanHome> {
               child: SearchBar(),
             ),
             Container(
-              padding: EdgeInsets.fromLTRB(10, 210, 10, 300),
-              child: HomeButtonGroup(),
+              padding: EdgeInsets.fromLTRB(10, 300, 10, 300),
+              child: FourButton(),
             )
           ],
         ),

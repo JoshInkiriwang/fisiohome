@@ -63,6 +63,7 @@ flutter:
 
     # Asset Home Page
     - assets/images/HomePage.jpg
+    - assets/icons/Scan.png
 
     # Asset Icons
     - assets/icons/IconKonsultasi.png
