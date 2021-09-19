@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 
 void main() {
   runApp(new MaterialApp(
-    theme: ThemeData(fontFamily: 'Raleway'),
+    theme: ThemeData(fontFamily: 'Raleway', backgroundColor: Colors.black26),
   ));
 }
 
@@ -18,7 +18,8 @@ class _HalamanHomeState extends State<HalamanHome> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        body: Stack(
+        body: SingleChildScrollView(
+        child : Stack(
           children: <Widget>[
             Container(
               alignment: Alignment(0, -0.995),
@@ -35,6 +36,6 @@ class _HalamanHomeState extends State<HalamanHome> {
           ],
         ),
       ),
-    );
+      ));
   }
 }
