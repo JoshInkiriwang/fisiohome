@@ -30,6 +30,10 @@ class _HalamanHomeState extends State<HalamanHome> {
               child: SearchBar(),
             ),
             Container(
+              padding: EdgeInsets.fromLTRB(10, 230, 10, 300),
+              child: FourButton(),
+            ),
+            Container(
               padding: EdgeInsets.fromLTRB(10, 300, 10, 300),
               child: FourButton(),
             )
