@@ -1,6 +1,6 @@
 import 'package:apps/Login/LoginStyle.dart';
 import 'package:apps/Register/RegisterPage.dart';
-import 'package:apps/BottomNavBar/BottomNav.dart';
+import 'package:apps/BottomNavBar.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import '../BottomNavBarWidgets/HalamanHome.dart';
-import '../BottomNavBarWidgets/HalamanActivity.dart';
-import '../BottomNavBarWidgets/HalamanArticle.dart';
-import '../BottomNavBarWidgets/HalamanChat.dart';
-import '../BottomNavBarWidgets/HalamanProfile.dart';
+import 'BottomNavBarWidgets/HomePage/HalamanHome.dart';
+import 'BottomNavBarWidgets/HalamanActivity.dart';
+import 'BottomNavBarWidgets/HalamanArticle.dart';
+import 'BottomNavBarWidgets/HalamanChat.dart';
+import 'BottomNavBarWidgets/HalamanProfile.dart';
 
 void main() {
   runApp(new MaterialApp(
