@@ -1,3 +1,4 @@
+
 import 'package:apps/BottomNavBarWidgets/HomePage/FourButtons.dart';
 import 'package:apps/BottomNavBarWidgets/HomePage/HomeButtonGroup.dart';
 import 'package:apps/BottomNavBarWidgets/HomePage/SearchBar.dart';
@@ -39,6 +40,10 @@ class _HalamanHomeState extends State<HalamanHome> {
                 padding: EdgeInsets.fromLTRB(10, 280, 10, 0),
                 child: FourButton(),
               ),
+              Container(
+                padding: EdgeInsets.fromLTRB(20, 380, 15, 0),
+                child: Text('Article Terbaru'),
+              )
             ],
           ),
        ),
