@@ -43,7 +43,11 @@ class _HalamanHomeState extends State<HalamanHome> {
               Container(
                 padding: EdgeInsets.fromLTRB(20, 380, 15, 0),
                 child: Text('Article Terbaru'),
-              )
+              ),
+              Container(
+                padding: EdgeInsets.fromLTRB(20, 440, 15, 0),
+                child: Text('Promo Terbaru'),
+              ),
             ],
           ),
        ),
