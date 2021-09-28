@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'BottomNavBarWidgets/HomePage/HalamanHome.dart';
-import 'BottomNavBarWidgets/HalamanActivity.dart';
-import 'BottomNavBarWidgets/HalamanArticle.dart';
+import 'BottomNavBarWidgets/ActivityPage/HalamanActivity.dart';
+import 'BottomNavBarWidgets/ArticlePage/HalamanArticle.dart';
 import 'BottomNavBarWidgets/HalamanChat.dart';
 import 'BottomNavBarWidgets/HalamanProfile.dart';
 

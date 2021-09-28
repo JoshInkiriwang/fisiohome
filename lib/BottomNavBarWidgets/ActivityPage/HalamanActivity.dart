@@ -1,11 +1,11 @@
-import 'package:apps/BottomNavBarWidgets/ActivityPageTextStyle.dart';
+import 'package:apps/BottomNavBarWidgets/ActivityPage/ActivityPageTextStyle.dart';
 import 'package:apps/ColorPalette.dart';
 import 'package:flutter/material.dart';
-import '../ActivityWidgets/HalamanVisit.dart';
-import '../ActivityWidgets/HalamanPaket.dart';
-import '../ActivityWidgets/HalamanKonsultasi.dart';
-import '../ActivityWidgets/HalamanLifestyle.dart';
-import '../ActivityWidgets/HalamanRiwayat.dart';
+import '../../ActivityWidgets/HalamanVisit.dart';
+import '../../ActivityWidgets/HalamanPaket.dart';
+import '../../ActivityWidgets/HalamanKonsultasi.dart';
+import '../../ActivityWidgets/HalamanLifestyle.dart';
+import '../../ActivityWidgets/HalamanRiwayat.dart';
 import 'ActivityPageColor.dart';
 
 void main() {

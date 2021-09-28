@@ -4,6 +4,7 @@ import 'package:apps/BottomNavBar.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:email_validator/email_validator.dart';
 
 void main() {
   runApp(
@@ -23,6 +24,9 @@ class _LoginPageState extends State<LoginPage> {
 
   String password = '';
   String email = '';
+
+  TextEditingController emailController = TextEditingController();
+  TextEditingController pwdController = TextEditingController();
 
   // Toggles the password show status
   void _toggle() {
@@ -54,31 +58,48 @@ class _LoginPageState extends State<LoginPage> {
 
             //FormField (Email)
             TextFormField(
+              controller: emailController,
               keyboardType: TextInputType.emailAddress,
               decoration: InputDecoration(
                 border: OutlineInputBorder(),
                 labelText: "Email Address",
                 hintText: "Enter your email address",
               ),
-
+              autovalidateMode: AutovalidateMode.onUserInteraction,
+              validator: (value) => EmailValidator.validate(value!) ? null : 'Please enter a valid email',
             ),
+
             SizedBox(height: 20.0), // <= Spacing
             //FormField (Password)
             TextFormField(
-                obscureText: _obsecureText,
-                decoration: InputDecoration(
-                    border: OutlineInputBorder(),
-                    labelText: "Password",
-                    hintText: "Enter your password",
-                    suffixIcon: IconButton(
-                        onPressed: _toggle,
-                        icon: Icon(
-                          _obsecureText
-                              ? Icons.visibility_off_rounded
-                              : Icons.visibility_rounded,
-                          color: Theme.of(context).primaryColorDark,
-                        )))),
+              controller: pwdController,
+              obscureText: _obsecureText,
+              decoration: InputDecoration(
+                  border: OutlineInputBorder(),
+                  labelText: "Password",
+                  hintText: "Enter your password",
+                  suffixIcon: IconButton(
+                      onPressed: _toggle,
+                      icon: Icon(
+                        _obsecureText
+                            ? Icons.visibility_off_rounded
+                            : Icons.visibility_rounded,
+                        color: Theme.of(context).primaryColorDark,
+                      ))),
+              autovalidateMode: AutovalidateMode.onUserInteraction,
+              validator: (value) {
+                if(value!.trim().isEmpty){
+                  return 'Please enter a password !';
+                }
+                if(value.trim().length < 8) {
+                  return 'Password must be at least 8 characters in length';
+                }
+                return null;
+              },
+            ),
+
             SizedBox(height: 20.0), // <= Spacing
+
             //Button Login
             SizedBox(
               height: 50,
@@ -111,7 +132,7 @@ class _LoginPageState extends State<LoginPage> {
                 style: LoginStyle.daftardisini,
                 recognizer: new TapGestureRecognizer()
                   ..onTap = () {
-                    Navigator.pushReplacement(
+                    Navigator.push(
                         context,
                         MaterialPageRoute(
                             builder: (context) => RegisterPage()));
