@@ -1,4 +1,4 @@
-import 'package:apps/Login/LoginPage.dart';
+import 'package:FisioHome/Login/LoginPage.dart';
 import 'OnBoardingStyle.dart';
 import 'package:flutter/material.dart';
 import 'Context.dart';

@@ -1,4 +1,4 @@
-import 'package:apps/OnBoarding/OnBoarding.dart';
+import 'package:FisioHome/OnBoarding/OnBoarding.dart';
 import 'package:flutter/material.dart';
 import 'dart:async';
 

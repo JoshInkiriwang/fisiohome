@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:apps/ColorPalette.dart';
+import 'package:FisioHome/ColorPalette.dart';
 
 void main() {
   runApp(new MaterialApp(

@@ -1,5 +1,5 @@
-import 'package:apps/BottomNavBarWidgets/ActivityPage/ActivityPageTextStyle.dart';
-import 'package:apps/ColorPalette.dart';
+import 'ActivityPageTextStyle.dart';
+import 'package:FisioHome/ColorPalette.dart';
 import 'package:flutter/material.dart';
 import '../../ActivityWidgets/HalamanVisit.dart';
 import '../../ActivityWidgets/HalamanPaket.dart';

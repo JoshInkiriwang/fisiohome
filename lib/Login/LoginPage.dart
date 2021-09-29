@@ -1,6 +1,6 @@
-import 'package:apps/Login/LoginStyle.dart';
-import 'package:apps/Register/RegisterPage.dart';
-import 'package:apps/BottomNavBar.dart';
+import 'package:FisioHome/Login/LoginStyle.dart';
+import 'package:FisioHome/Register/RegisterPage.dart';
+import 'package:FisioHome/BottomNavBar.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -64,28 +64,39 @@ class _LoginPageState extends State<LoginPage> {
                 border: OutlineInputBorder(),
                 labelText: "Email Address",
                 hintText: "Enter your email address",
+                prefixIcon: Icon(
+                  Icons.email,
+                  color: Colors.black,
+                ),
               ),
               autovalidateMode: AutovalidateMode.onUserInteraction,
               validator: (value) => EmailValidator.validate(value!) ? null : 'Please enter a valid email',
             ),
 
             SizedBox(height: 20.0), // <= Spacing
+
             //FormField (Password)
             TextFormField(
               controller: pwdController,
               obscureText: _obsecureText,
               decoration: InputDecoration(
-                  border: OutlineInputBorder(),
-                  labelText: "Password",
-                  hintText: "Enter your password",
-                  suffixIcon: IconButton(
-                      onPressed: _toggle,
-                      icon: Icon(
-                        _obsecureText
-                            ? Icons.visibility_off_rounded
-                            : Icons.visibility_rounded,
-                        color: Theme.of(context).primaryColorDark,
-                      ))),
+                border: OutlineInputBorder(),
+                labelText: "Password",
+                hintText: "Enter your password",
+                prefixIcon: Icon(
+                    Icons.lock,
+                    color: Colors.black,
+                ),
+                suffixIcon: IconButton(
+                    onPressed: _toggle,
+                    icon: Icon(
+                      _obsecureText
+                        ? Icons.visibility_off_rounded
+                        : Icons.visibility_rounded,
+                      color: Theme.of(context).primaryColorDark,
+                    ),
+                ),
+              ),
               autovalidateMode: AutovalidateMode.onUserInteraction,
               validator: (value) {
                 if(value!.trim().isEmpty){

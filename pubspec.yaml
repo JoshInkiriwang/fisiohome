@@ -1,5 +1,5 @@
-name: apps
-description: A new Flutter project.
+name: FisioHome
+description: A new Fisioterapi Apps.
 
 # The following line prevents the package from being accidentally published to
 # pub.dev using `pub publish`. This is preferred for private packages.
@@ -29,7 +29,7 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   introduction_screen: ^2.1.0
-  firebase_auth: ^3.1.0
+  firebase_auth: ^3.1.1
   firebase_core: ^1.6.0
   email_validator: ^2.0.1
 
