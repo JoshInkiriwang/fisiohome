@@ -1,6 +1,5 @@
 import 'package:FisioHome/Login/LoginStyle.dart';
 import 'package:FisioHome/Register/RegisterPage.dart';
-import 'package:FisioHome/BottomNavBar.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -71,6 +70,9 @@ class _LoginPageState extends State<LoginPage> {
               ),
               autovalidateMode: AutovalidateMode.onUserInteraction,
               validator: (value) => EmailValidator.validate(value!) ? null : 'Please enter a valid email',
+              onChanged: (value) {
+                email = value.toString().trim();
+              },
             ),
 
             SizedBox(height: 20.0), // <= Spacing
@@ -107,6 +109,9 @@ class _LoginPageState extends State<LoginPage> {
                 }
                 return null;
               },
+              onChanged: (value) {
+                password = value.toString().trim();
+              },
             ),
 
             SizedBox(height: 20.0), // <= Spacing
@@ -117,10 +122,8 @@ class _LoginPageState extends State<LoginPage> {
               width: double.infinity,
               child: TextButton(
                 onPressed: () {
-                  Navigator.pushReplacement(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => BottomNav()));
+                  print(email);
+                  print(password);
                 },
                 child: Text(
                   'Login',

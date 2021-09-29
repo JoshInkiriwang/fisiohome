@@ -90,6 +90,9 @@ class _RegisterPageState extends State<RegisterPage> {
                   )
                 ),
               ),
+              onChanged: (value) {
+                password = value;
+              },
               autovalidateMode: AutovalidateMode.onUserInteraction,
               validator: (value) {
                 if(value!.trim().isEmpty){
@@ -109,9 +112,9 @@ class _RegisterPageState extends State<RegisterPage> {
               height: 50,
               width: double.infinity,
               child: TextButton(
-                onPressed: () {
-                  print(emailController);
-                  print(pwdController);
+                onPressed: () async {
+                  print(email);
+                  print(password);
                 },
                 child: Text(
                   'Sign Up',
