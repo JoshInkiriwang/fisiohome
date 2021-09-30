@@ -1,19 +1,26 @@
 import 'package:email_validator/email_validator.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'RegisterStyle.dart';
 
-class RegisterPage extends StatefulWidget {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+
+  runApp(RegisterPage());
+}
+
+class RegisterPage extends StatefulWidget{
+  const RegisterPage({Key? key}) : super(key: key);
+
   _RegisterPageState createState() => _RegisterPageState();
 }
 
 class _RegisterPageState extends State<RegisterPage> {
   bool _obsecureText = true;
 
-  String email = '';
-  String password = '';
-
-  TextEditingController emailController = TextEditingController();
-  TextEditingController pwdController = TextEditingController();
+  final emailController = TextEditingController();
+  final pwdController = TextEditingController();
 
   // Toggles the password show status
   void _toggle() {
@@ -59,9 +66,6 @@ class _RegisterPageState extends State<RegisterPage> {
                   color: Colors.black,
                 ),
               ),
-              onChanged: (value) {
-                email = value.toString().trim();
-              },
               autovalidateMode: AutovalidateMode.onUserInteraction,
               validator: (value) => EmailValidator.validate(value!) ? null : 'Please enter a valid email',
             ),
@@ -90,9 +94,6 @@ class _RegisterPageState extends State<RegisterPage> {
                   )
                 ),
               ),
-              onChanged: (value) {
-                password = value;
-              },
               autovalidateMode: AutovalidateMode.onUserInteraction,
               validator: (value) {
                 if(value!.trim().isEmpty){
@@ -110,11 +111,11 @@ class _RegisterPageState extends State<RegisterPage> {
             //Button Sign Up
             SizedBox(
               height: 50,
-              width: double.infinity,
+               width: double.infinity,
               child: TextButton(
                 onPressed: () async {
-                  print(email);
-                  print(password);
+                  print(emailController);
+                  print(pwdController);
                 },
                 child: Text(
                   'Sign Up',
