@@ -1,3 +1,4 @@
+import 'package:FisioHome/BottomNavBarWidgets/HomePage/ArticleSection.dart';
 import 'package:FisioHome/BottomNavBarWidgets/HomePage/FourButtons.dart';
 import 'package:FisioHome/BottomNavBarWidgets/HomePage/HomeButtonGroup.dart';
 import 'package:FisioHome/BottomNavBarWidgets/HomePage/SearchBar.dart';
@@ -41,13 +42,12 @@ class _HalamanHomeState extends State<HalamanHome> {
                 child: FourButton(),
               ),
               Container(
-                padding: EdgeInsets.fromLTRB(20, 380, 15, 0),
-                child: Text('Article Terbaru'),
+                padding: EdgeInsets.fromLTRB(20, 380, 10, 0),
+                child: ArticleSection(),
               ),
-              Container(
-                padding: EdgeInsets.fromLTRB(20, 440, 15, 0),
-                child: Text('Promo Terbaru'),
-              ),
+              /*Container(
+                child: PromoSection(),
+              ),*/
             ],
           ),
        ),

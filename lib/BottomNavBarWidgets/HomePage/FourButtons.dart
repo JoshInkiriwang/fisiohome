@@ -23,17 +23,26 @@ class FourButton extends StatelessWidget {
             children: <Widget>[
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                    primary: Colors.white,
-                    elevation: 2.0,
-                    fixedSize: Size(53.0, 53.0)
+                  primary: Colors.white,
+                  elevation: 2.0,
+                  fixedSize: Size(55.0, 65.0),
+                  shape: new RoundedRectangleBorder(
+                      borderRadius: new BorderRadius.circular(10.0)
+                  ),
                 ),
+
                 onPressed: () {
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) => HalamanVisit()));
                 },
-                child: Image.asset('assets/icons/IconVisit.png', alignment: Alignment.center),
+
+                child: Image.asset('assets/icons/IconVisit.png',
+                  alignment: Alignment.center, scale: 0.8
+                ),
               ),
+
               SizedBox(height: 5,),
+
               const Text('Visit', style: TextStyle(fontWeight: FontWeight.w500, fontSize: 12),),
             ],
           ),
@@ -44,17 +53,26 @@ class FourButton extends StatelessWidget {
             children: <Widget>[
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                    primary: Colors.white,
-                    elevation: 2.0,
-                    fixedSize: Size(53.0, 53.0)
+                  primary: Colors.white,
+                  elevation: 2.0,
+                  fixedSize: Size(55.0, 65.0),
+                  shape: new RoundedRectangleBorder(
+                      borderRadius: new BorderRadius.circular(10.0)
+                  ),
                 ),
+
                 onPressed: () {
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) => HalamanPaket()));
                 },
-                child: Image.asset('assets/icons/IconPaket.png', alignment: Alignment.center),
+
+                child: Image.asset('assets/icons/IconPaket.png',
+                    alignment: Alignment.center, scale: 0.8
+                ),
               ),
-              SizedBox(height: 5,),
+
+              SizedBox(height: 5),
+
               const Text('Paket', style: TextStyle(fontWeight: FontWeight.w500, fontSize: 12),),
             ],
           ),
@@ -65,17 +83,26 @@ class FourButton extends StatelessWidget {
             children: <Widget>[
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                    primary: Colors.white,
-                    elevation: 2.0,
-                    fixedSize: Size(53.0, 53.0)
+                  primary: Colors.white,
+                  elevation: 2.0,
+                  fixedSize: Size(55.0, 65.0),
+                  shape: new RoundedRectangleBorder(
+                      borderRadius: new BorderRadius.circular(10.0)
+                  ),
                 ),
+
                 onPressed: () {
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) => HalamanLifestyle()));
                 },
-                child: Image.asset('assets/icons/IconLifestyle.png', alignment: Alignment.center),
+
+                child: Image.asset('assets/icons/IconLifestyle.png',
+                    alignment: Alignment.center, scale: 0.8
+                ),
               ),
-              SizedBox(height: 5,),
+
+              SizedBox(height: 5),
+
               const Text('Lifestyle', style: TextStyle(fontWeight: FontWeight.w500, fontSize: 12),),
             ],
           ),
@@ -86,17 +113,26 @@ class FourButton extends StatelessWidget {
             children: <Widget>[
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                    primary: Colors.white,
-                    elevation: 2.0,
-                    fixedSize: Size(53.0, 53.0)
+                  primary: Colors.white,
+                  elevation: 2.0,
+                  fixedSize: Size(55.0, 65.0),
+                  shape: new RoundedRectangleBorder(
+                      borderRadius: new BorderRadius.circular(10.0)
+                  ),
                 ),
+
                 onPressed: () {
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) => HalamanKonsultasi()));
                 },
-                child: Image.asset('assets/icons/IconKonsultasi.png', alignment: Alignment.center),
+
+                child: Image.asset('assets/icons/IconKonsultasi.png',
+                    alignment: Alignment.center, scale: 0.8
+                ),
               ),
-              SizedBox(height: 5,),
+
+              SizedBox(height: 5),
+
               const Text('Konsultasi', style: TextStyle(fontWeight: FontWeight.w500, fontSize: 12),),
             ],
           ),
