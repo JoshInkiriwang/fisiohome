@@ -1,3 +1,4 @@
+import 'package:FisioHome/BottomNavBarWidgets/ArticlePage/Detail%20Article.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -30,11 +31,7 @@ class HalamanArticle extends StatelessWidget {
       body: ListView(
         padding: EdgeInsets.symmetric(vertical: 15.0, horizontal: 15.0),
         children: [
-          InkWell(
-            child: Article1(),
-            onTap: () => ScaffoldMessenger.of(context).showSnackBar(
-                SnackBar(content: Text('Article1 Pressed'))),
-          ),
+          Article1(),
           SizedBox(height: 5),
           InkWell(
             child: Article2(),
@@ -62,8 +59,12 @@ class HalamanArticle extends StatelessWidget {
 class Article1 extends StatelessWidget {
   @override
   Widget build(BuildContext context){
-    return Card(
-      elevation: 3.0,
+    return InkWell(
+      onTap: () => Navigator.push(
+          context, MaterialPageRoute(builder: (context) => DetailArticle1()),
+      ),
+      child: Card(
+        elevation: 3.0,
         child: Column(
           children: [
             SizedBox(
@@ -90,6 +91,7 @@ class Article1 extends StatelessWidget {
               ),
             ),
           ],
+        ),
       ),
     );
   }
