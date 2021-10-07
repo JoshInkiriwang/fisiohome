@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'BottomNavBarWidgets/HomePage/HalamanHome.dart';
 import 'BottomNavBarWidgets/ActivityPage/HalamanActivity.dart';
 import 'BottomNavBarWidgets/ArticlePage/HalamanArticle.dart';
-import 'BottomNavBarWidgets/HalamanChat.dart';
+import 'BottomNavBarWidgets/ChatPage/HalamanChat.dart';
 import 'BottomNavBarWidgets/HalamanProfile.dart';
 
 void main() {

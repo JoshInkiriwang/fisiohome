@@ -1,7 +1,7 @@
 import 'package:FisioHome/BottomNavBarWidgets/HomePage/Components/ArticleSection.dart';
 import 'package:FisioHome/BottomNavBarWidgets/HomePage/Components/FourButtons.dart';
 import 'package:FisioHome/BottomNavBarWidgets/HomePage/Components/HomeButtonGroup.dart';
-import 'package:FisioHome/BottomNavBarWidgets/HomePage/Components/PromoSection.dart';
+import 'package:FisioHome/BottomNavBarWidgets/HomePage/Components/Promo/PromoSection.dart';
 import 'package:FisioHome/BottomNavBarWidgets/HomePage/Components/SearchBar.dart';
 
 import 'package:flutter/material.dart';

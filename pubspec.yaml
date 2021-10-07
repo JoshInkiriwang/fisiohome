@@ -57,9 +57,6 @@ flutter:
     - assets/images/Slider2.jpg
     - assets/images/Slider3.jpg
 
-    # Asset Login Page
-    - assets/images/google_logo.jpg
-
     # Asset Home Page
     - assets/images/HomePage.jpg
     - assets/icons/Scan.png
@@ -79,6 +76,9 @@ flutter:
     - assets/images/Artikel3.jpg
     - assets/images/Artikel4.jpg
     - assets/images/DetailArtikel1.jpg
+
+    - assets/images/Promo1.jpg
+    - assets/images/Promo2.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

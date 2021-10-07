@@ -1,6 +1,3 @@
-import 'package:FisioHome/BottomNavBar.dart';
-import 'package:FisioHome/BottomNavBarWidgets/ArticlePage/HalamanArticle.dart';
-import 'package:FisioHome/BottomNavBarWidgets/HomePage/HalamanHome.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
