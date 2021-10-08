@@ -17,7 +17,9 @@ class ActivityPageTextStyle {
   );
 
   static const subtitlecard = TextStyle(
-      fontSize: 12,
-      fontWeight: FontWeight.w300,
-      color: ActivityPageColor.subtitleCardFontColor);
+    fontSize: 12,
+    fontWeight: FontWeight.w300,
+    color: ActivityPageColor.subtitleCardFontColor,
+    fontFamily: 'Raleway',
+  );
 }

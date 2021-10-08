@@ -72,7 +72,7 @@ class CardVisit extends StatelessWidget {
         ),
         title: Text('Visit', style: ActivityPageTextStyle.titlecard),
         trailing: Icon(
-          Icons.arrow_forward_ios_sharp,
+          Icons.arrow_forward_ios_rounded,
           color: ActivityPageColor.ArrowForwardColor,
         ),
         subtitle: Text('xxxxxx', style: ActivityPageTextStyle.subtitlecard),
@@ -100,8 +100,10 @@ class CardPaket extends StatelessWidget {
           ),
         ),
         title: Text('Paket', style: ActivityPageTextStyle.titlecard),
-        trailing: Icon(Icons.arrow_forward_ios_sharp,
-            color: ActivityPageColor.ArrowForwardColor),
+        trailing: Icon(
+          Icons.arrow_forward_ios_rounded,
+          color: ActivityPageColor.ArrowForwardColor,
+        ),
         subtitle: Text('xxxxxx', style: ActivityPageTextStyle.subtitlecard),
         onTap: () => Navigator.push(
             context, MaterialPageRoute(builder: (context) => HalamanPaket())),
@@ -127,8 +129,10 @@ class CardKonsultasi extends StatelessWidget {
           ),
         ),
         title: Text('Konsultasi', style: ActivityPageTextStyle.titlecard),
-        trailing: Icon(Icons.arrow_forward_ios_sharp,
-            color: ActivityPageColor.ArrowForwardColor),
+        trailing: Icon(
+          Icons.arrow_forward_ios_rounded,
+          color: ActivityPageColor.ArrowForwardColor,
+        ),
         subtitle: Text('xxxxxx', style: ActivityPageTextStyle.subtitlecard),
         onTap: () => Navigator.push(context,
             MaterialPageRoute(builder: (context) => HalamanKonsultasi())),
@@ -154,8 +158,10 @@ class CardLifestyle extends StatelessWidget {
           ),
         ),
         title: Text('Lifestyle', style: ActivityPageTextStyle.titlecard),
-        trailing: Icon(Icons.arrow_forward_ios_sharp,
-            color: ActivityPageColor.ArrowForwardColor),
+        trailing: Icon(
+          Icons.arrow_forward_ios_rounded,
+          color: ActivityPageColor.ArrowForwardColor,
+        ),
         subtitle: Text('xxxxxx', style: ActivityPageTextStyle.subtitlecard),
         onTap: () => Navigator.push(context,
             MaterialPageRoute(builder: (context) => HalamanLifestyle())),
@@ -181,8 +187,10 @@ class CardRiwayat extends StatelessWidget {
           ),
         ),
         title: Text('Riwayat', style: ActivityPageTextStyle.titlecard),
-        trailing: Icon(Icons.arrow_forward_ios_sharp,
-            color: ActivityPageColor.ArrowForwardColor),
+        trailing: Icon(
+          Icons.arrow_forward_ios_rounded,
+          color: ActivityPageColor.ArrowForwardColor,
+        ),
         subtitle: Text('xxxxxx', style: ActivityPageTextStyle.subtitlecard),
         onTap: () => Navigator.push(
             context, MaterialPageRoute(builder: (context) => HalamanRiwayat())),
