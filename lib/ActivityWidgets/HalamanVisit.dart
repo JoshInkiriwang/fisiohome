@@ -12,7 +12,7 @@ class HalamanVisit extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: new Text('Visit'),
+          title: new Text('Visit Langsung'),
           backgroundColor: Color.fromRGBO(95, 37, 224, 100),
         ),
         body: new Container(

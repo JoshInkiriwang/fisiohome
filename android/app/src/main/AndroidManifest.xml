@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.fisiohome.apps">
    <application
-        android:label="apps"
+        android:label="FisioHome"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

@@ -22,26 +22,31 @@ class OnBoardingTextStyle {
     fontWeight: FontWeight.w700,
     fontSize: 18,
     wordSpacing: -0.3,
+    fontFamily: 'Raleway',
   );
 
   static const descriptionTextStyle = TextStyle(
     color: OnBoardingColor.descriptionColor,
     fontSize: 15,
     wordSpacing: -0.3,
+    fontWeight: FontWeight.w500,
+    fontFamily: 'Raleway',
+    height: 1.9,
   );
 }
 
 class OnBoardingBtnStyle {
   static const nextdoneBtnStyle = TextStyle(
     fontSize: 20,
-
     wordSpacing: -0.3,
     fontWeight: FontWeight.w700,
+    fontFamily: 'Raleway',
   );
 
   static const skipBtnStyle = TextStyle(
     fontSize: 20,
     wordSpacing: -0.3,
     fontWeight: FontWeight.w500,
+    fontFamily: 'Raleway',
   );
 }

@@ -10,7 +10,6 @@ import 'ActivityPageColor.dart';
 
 void main() {
   runApp(new MaterialApp(
-    theme: ThemeData(fontFamily: 'Raleway'),
     home: new HalamanActivity(),
   ));
 }
@@ -18,34 +17,48 @@ void main() {
 class HalamanActivity extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          'Aktivitas Saya',
-          style: ActivityPageTextStyle.AppBar_Aktivitas,
+    return SafeArea(
+      child: Scaffold(
+        appBar: AppBar(
+          title: Padding(
+            padding: EdgeInsets.only(left: 10.0),
+            child: Text(
+                'Aktivitas Saya',
+                style: ActivityPageTextStyle.AppBar_Aktivitas
+            ),
+          ),
+
+          backgroundColor: ColorPalette.appBarColor,
         ),
-        backgroundColor: ColorPalette.appBarColor,
-      ),
-      body: ListView(
-        padding: EdgeInsets.only(left: 15, right: 15),
-        children: [
-          CardVisit(),
-          CardPaket(),
-          CardKonsultasi(),
-          CardLifestyle(),
-          CardRiwayat(),
-        ],
-      ),
-    );
+        body: ListView(
+          padding: EdgeInsets.symmetric(vertical: 25.0, horizontal: 20.0),
+          children: [
+            CardVisit(),
+            Padding(
+              padding: EdgeInsets.only(top: 10.0, bottom: 10.0),
+              child: CardPaket(),
+            ),
+            CardKonsultasi(),
+            Padding(
+              padding: EdgeInsets.only(top: 10.0, bottom: 10.0),
+              child: CardLifestyle(),
+            ),
+            Padding(
+              padding: EdgeInsets.only(bottom: 10.0),
+              child: CardRiwayat(),
+            ),
+          ],
+        ),
+      ));
   }
 }
-//padding: EdgeInsets.fromLTRB(left, top, right, bottom);
 
 //Cards
 class CardVisit extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
+      elevation: 4.0,
       child: ListTile(
         leading: ElevatedButton(
           onPressed: () => Navigator.push(
@@ -74,6 +87,7 @@ class CardPaket extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
+      elevation: 4.0,
       child: ListTile(
         leading: ElevatedButton(
           onPressed: () => Navigator.push(
@@ -100,6 +114,7 @@ class CardKonsultasi extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
+      elevation: 4.0,
       child: ListTile(
         leading: ElevatedButton(
           onPressed: () => Navigator.push(
@@ -126,6 +141,7 @@ class CardLifestyle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
+      elevation: 4.0,
       child: ListTile(
         leading: ElevatedButton(
           onPressed: () => Navigator.push(
@@ -152,6 +168,7 @@ class CardRiwayat extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
+      elevation: 4.0,
       child: ListTile(
         leading: ElevatedButton(
           onPressed: () => Navigator.push(

@@ -6,12 +6,12 @@ import 'package:introduction_screen/introduction_screen.dart';
 
 void main() {
   runApp(new MaterialApp(
-    theme: ThemeData(fontFamily: 'Raleway'),
     home: new OnBoarding(),
   ));
 }
 
 class OnBoarding extends StatelessWidget {
+
   List<PageViewModel> getPages() {
     return [
       PageViewModel(
