@@ -69,6 +69,7 @@ flutter:
     - assets/icons/IconPaket.png
     - assets/icons/IconVisit.png
     - assets/icons/IconRiwayat.png
+    - assets/icons/LogoVisitSekarang.png
 
     # Asset Article //Temporary
     - assets/images/Artikel1.jpg
