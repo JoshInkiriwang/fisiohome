@@ -69,7 +69,10 @@ flutter:
     - assets/icons/IconPaket.png
     - assets/icons/IconVisit.png
     - assets/icons/IconRiwayat.png
+
+    # Asset Halaman Visit Sekarang
     - assets/icons/LogoVisitSekarang.png
+    - assets/icons/IconCalendar.png
 
     # Asset Article //Temporary
     - assets/images/Artikel1.jpg
