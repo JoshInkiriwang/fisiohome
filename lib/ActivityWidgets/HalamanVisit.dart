@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 class HalamanVisit extends StatefulWidget {
   const HalamanVisit({Key? key}) : super(key: key);
@@ -8,12 +9,27 @@ class HalamanVisit extends StatefulWidget {
 }
 
 class _HalamanVisitState extends State<HalamanVisit> {
-  final _formKey = GlobalKey<FormState>();
+  final GlobalKey<FormState> _visitformKey = GlobalKey<FormState>();
+
+  TextEditingController _tanggalTerapi = TextEditingController();
+  TextEditingController _keluhanSejak = TextEditingController();
+
+  @override
+  void initState() {
+    _tanggalTerapi.text = '';
+    _keluhanSejak.text = '';
+    super.initState();
+  }
+
+  void dispose() {
+    _tanggalTerapi.dispose();
+    _keluhanSejak.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
       appBar: AppBar(
         leading: Padding(
           padding: EdgeInsets.only(left: 30.0,right: 0.0),
@@ -24,8 +40,9 @@ class _HalamanVisitState extends State<HalamanVisit> {
       ),
 
       body: Form(
+        key: _visitformKey,
         child: Container(
-          padding: EdgeInsets.symmetric(vertical: 28.0, horizontal: 30.0),
+          padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 30.0),
             child: SingleChildScrollView(
               child: Column(
                 children: <Widget>[
@@ -42,7 +59,9 @@ class _HalamanVisitState extends State<HalamanVisit> {
                       labelText: 'Nama Pasien',
                     ),
                   ),
+
                   SizedBox(height: 10.0),
+
                   //Usia Pasien
                   TextFormField(
                     decoration: new InputDecoration(
@@ -56,7 +75,9 @@ class _HalamanVisitState extends State<HalamanVisit> {
                       labelText: 'Usia Pasien',
                     ),
                   ),
+
                   SizedBox(height: 10.0),
+
                   //Jenis Kelamin
                   TextFormField(
                     decoration: new InputDecoration(
@@ -70,7 +91,9 @@ class _HalamanVisitState extends State<HalamanVisit> {
                       labelText: 'Jenis Kelamin',
                     ),
                   ),
+
                   SizedBox(height: 10.0),
+
                   //Keluhan Utama
                   TextFormField(
                     decoration: new InputDecoration(
@@ -84,10 +107,15 @@ class _HalamanVisitState extends State<HalamanVisit> {
                       labelText: 'Keluhan Utama',
                     ),
                   ),
+
                   SizedBox(height: 10.0),
+
                   //Keluhan Sejak
                   TextFormField(
+                    controller: _keluhanSejak,
+                    readOnly: true,
                     decoration: new InputDecoration(
+                      suffixIcon: Image.asset('assets/icons/IconCalendar.png'),
                       border: OutlineInputBorder(
                         borderSide: BorderSide(
                             color: Color.fromRGBO(217, 223, 229, 100),
@@ -97,8 +125,26 @@ class _HalamanVisitState extends State<HalamanVisit> {
                       hintText: 'dd/mm/yyyy',
                       labelText: 'Keluhan Sejak',
                     ),
+                    onTap: () async {
+                      DateTime? pickedDate = await showDatePicker(
+                        context: context,
+                        initialDate: DateTime.now(),
+                        firstDate: DateTime(2021),
+                        lastDate: DateTime(2100),
+                        cancelText: 'Cancel',
+                      );
+
+                      if (pickedDate != null) {
+                        setState(() {
+                          String formattedDate = DateFormat('dd-MM-yyyy').format(pickedDate);
+                          _keluhanSejak.text = formattedDate;
+                        });
+                      }
+                    },
                   ),
+
                   SizedBox(height: 10.0),
+
                   //Diagnosa Dokter (Jika Ada)
                   TextFormField(
                     decoration: new InputDecoration(
@@ -112,7 +158,9 @@ class _HalamanVisitState extends State<HalamanVisit> {
                       labelText: 'Diagnosa Dokter',
                     ),
                   ),
+
                   SizedBox(height: 10.0),
+
                   //Kondisi Pasien Sekarang
                   TextFormField(
                     decoration: new InputDecoration(
@@ -126,7 +174,9 @@ class _HalamanVisitState extends State<HalamanVisit> {
                       labelText: 'Nama Pasien',
                     ),
                   ),
+
                   SizedBox(height: 10.0),
+
                   //Permintaan Khusus
                   TextFormField(
                     decoration: new InputDecoration(
@@ -145,9 +195,13 @@ class _HalamanVisitState extends State<HalamanVisit> {
                       labelText: 'Permintaan Khusus',
                     ),
                   ),
+
                   SizedBox(height: 10.0),
+
                   //Pilih Tanggal Terapi
                   TextFormField(
+                    controller: _tanggalTerapi,
+                    readOnly: true,
                     decoration: new InputDecoration(
                       suffixIcon: Image.asset('assets/icons/IconCalendar.png'),
                       border: OutlineInputBorder(
@@ -159,8 +213,26 @@ class _HalamanVisitState extends State<HalamanVisit> {
                       hintText: 'Date Pop Up',
                       labelText: 'Pilih Tanggal Terapi',
                     ),
+                    onTap: () async {
+                      DateTime? pickedDate = await showDatePicker(
+                        context: context,
+                        initialDate: DateTime.now(),
+                        firstDate: DateTime.now(),
+                        lastDate: DateTime(2100),
+                        cancelText: 'Cancel',
+                      );
+
+                      if (pickedDate != null) {
+                        setState(() {
+                          String formattedDate = DateFormat('dd-MM-yyyy').format(pickedDate);
+                          _tanggalTerapi.text = formattedDate;
+                        });
+                      }
+                    },
                   ),
+
                   SizedBox(height: 15.0),
+
                   //Tombol "Lanjutkan Pemesanan"
                   TextButton(
                     onPressed: () {},
