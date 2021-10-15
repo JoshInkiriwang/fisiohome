@@ -1,4 +1,4 @@
-import 'package:FisioHome/BottomNavBar.dart';
+import 'package:FisioHome/LoginPage/LoginPage.dart';
 import 'OnBoardingStyle.dart';
 import 'package:flutter/material.dart';
 import 'Context.dart';
@@ -61,7 +61,7 @@ class OnBoarding extends StatelessWidget {
             done: Text('Selesai', style: OnBoardingBtnStyle.nextdoneBtnStyle,),
             onDone: () {
               Navigator.pushReplacement(
-                  context, MaterialPageRoute(builder: (context) => BottomNav()));
+                  context, MaterialPageRoute(builder: (context) => LoginPage()));
             },
 
             next: Text('Lanjut', style: OnBoardingBtnStyle.nextdoneBtnStyle,),
@@ -69,7 +69,7 @@ class OnBoarding extends StatelessWidget {
             skip: Text('Lewati', style: OnBoardingBtnStyle.skipBtnStyle,),
             onSkip: () {
               Navigator.pushReplacement(
-                  context, MaterialPageRoute(builder: (context) => BottomNav()));
+                  context, MaterialPageRoute(builder: (context) => LoginPage()));
             },
 
             //Dot Indicator Style
