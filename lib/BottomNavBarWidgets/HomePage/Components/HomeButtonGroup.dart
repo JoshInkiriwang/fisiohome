@@ -1,3 +1,4 @@
+import 'package:FisioHome/BottomNavBarWidgets/HomePage/Components/QRScanner.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -20,7 +21,9 @@ class HomeButtonGroup extends StatelessWidget {
                   width: 24.0, height: 24.0, color: Colors.black87,
                 ),
                 onTap: () {
-                  print('Scan Button Pressed');
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => QRScanner())
+                  );
                 },
               ),
               padding: EdgeInsets.only(left: 20.0, right: 5.0),
