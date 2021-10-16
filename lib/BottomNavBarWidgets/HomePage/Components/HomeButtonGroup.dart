@@ -2,7 +2,14 @@ import 'package:FisioHome/BottomNavBarWidgets/HomePage/Components/QRScanner.dart
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class HomeButtonGroup extends StatelessWidget {
+class HomeButtonGroup extends StatefulWidget {
+  const HomeButtonGroup({Key? key}) : super(key: key);
+
+  @override
+  _HomeButtonGroupState createState() => _HomeButtonGroupState();
+}
+
+class _HomeButtonGroupState extends State<HomeButtonGroup>{
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -10,6 +17,13 @@ class HomeButtonGroup extends StatelessWidget {
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(5),
         color: Colors.white,
+        boxShadow: [
+          BoxShadow(
+            color: Colors.grey,
+            offset: Offset(0.0, 1.0),
+            blurRadius: 6.0
+          ),
+        ],
       ),
       child: IntrinsicHeight(
         child: new Row(

@@ -1,4 +1,4 @@
-import 'package:FisioHome/ColorPalette.dart';
+
 import 'package:flutter/material.dart';
 
 import 'HomePage/Components/HomeButtonGroup.dart';
@@ -22,18 +22,54 @@ class HalamanProfile extends StatelessWidget {
             padding: EdgeInsets.all(20.0),
             child: Column(
               children: <Widget>[
-                Expanded(
+                Container(
+                  height: 150.0,
                   child: Row(
                     children: <Widget>[
-                      Image.asset('assets/images/logoFisiohome.png'),
+                      Column(
+                        children: <Widget>[
+                          CircleAvatar(
+                            radius: 50,
+                            backgroundImage: NetworkImage(
+                              'https://www.rd.com/wp-content/uploads/2017/09/'
+                              '01-shutterstock_476340928-Irina-Bg.jpg?'
+                              'resize=1024,683'
+                            ),
+                          ),
+                          TextButton(
+                            onPressed: () {},
+                            child: Text('Edit Foto'),
+                          ),
+                        ],
+                      ),
+                      Flexible(
+                        child: Padding(
+                          padding: EdgeInsets.only(left: 30.0),
+                          child: Expanded(
+                            child: Text('Ananda Setya Kinanthi',
+                              style: TextStyle(
+                                fontFamily: 'Raleway',
+                                fontSize: 16,
+                                fontWeight: FontWeight.w600,
+                                color: Color.fromRGBO(46, 46, 46, 100),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.only(left: 25.0),
+                        child: Icon(Icons.arrow_forward_ios_rounded),
+                      ),
                     ],
                   ),
                 ),
                 const Divider(
                   height: 20,
-               //   thickness: 5,
-                  indent: 20,
-                  endIndent: 20,
+                  thickness: 2,
+                  indent: 10,
+                  endIndent: 10,
+                  color: Color.fromRGBO(209, 209, 209, 100),
                 ),
                 Container(
                   height: 100.0,
@@ -47,16 +83,16 @@ class HalamanProfile extends StatelessWidget {
 
                 const Divider(
                   height: 20,
-                  indent: 20,
-                  endIndent: 20,
+                  thickness: 2,
+                  indent: 10,
+                  endIndent: 10,
+                  color: Color.fromRGBO(209, 209, 209, 100),
                 ),
 
-                Expanded(
-                  child: Container(
-                    color: Colors.green,
-                    child: const Center(
-                      child: Text('Below'),
-                    ),
+                Container(
+                  child: ListTile(
+                    title: Text('Aktivitas Saya'),
+                    trailing: Icon(Icons.arrow_forward_ios_rounded),
                   ),
                 ),
               ],

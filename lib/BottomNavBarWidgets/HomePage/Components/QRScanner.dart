@@ -42,7 +42,7 @@ class _QRScannerState extends State<QRScanner> {
                     height: 300,
                     decoration: BoxDecoration(
                       border: Border.all(
-                        color: Colors.red,
+                        color: Colors.redAccent,
                         width: 4,
                       ),
                       borderRadius: BorderRadius.circular(12.0),
@@ -55,7 +55,7 @@ class _QRScannerState extends State<QRScanner> {
           Expanded(
             flex: 1,
             child: Center(
-              child: Text('Scan A Code'),
+              child: Text('Scan A Code', style: TextStyle(color: Colors.yellow),),
             ),
           ),
         ],
