@@ -1,7 +1,7 @@
-
 import 'package:flutter/material.dart';
 
-import 'HomePage/Components/HomeButtonGroup.dart';
+import '../HomePage/Components/HomeButtonGroup.dart';
+import 'HalamanEditProfile.dart';
 
 void main() {
   runApp(new MaterialApp(
@@ -13,12 +13,13 @@ void main() {
 class HalamanProfile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: AppBar(
-          title: new Text('Profile'),
-          backgroundColor: Color.fromRGBO(95, 37, 224, 100),
-        ),
-        body: new Container(
+    return SafeArea(
+        child: Scaffold(
+          appBar: AppBar(
+            title: new Text('Profile'),
+            backgroundColor: Color.fromRGBO(95, 37, 224, 100),
+          ),
+          body: Container(
             padding: EdgeInsets.all(20.0),
             child: Column(
               children: <Widget>[
@@ -29,11 +30,11 @@ class HalamanProfile extends StatelessWidget {
                       Column(
                         children: <Widget>[
                           CircleAvatar(
-                            radius: 50,
+                            radius: 51,
                             backgroundImage: NetworkImage(
-                              'https://www.rd.com/wp-content/uploads/2017/09/'
-                              '01-shutterstock_476340928-Irina-Bg.jpg?'
-                              'resize=1024,683'
+                                'https://www.rd.com/wp-content/uploads/2017/09/'
+                                    '01-shutterstock_476340928-Irina-Bg.jpg?'
+                                    'resize=1024,683'
                             ),
                           ),
                           TextButton(
@@ -42,25 +43,40 @@ class HalamanProfile extends StatelessWidget {
                           ),
                         ],
                       ),
-                      Flexible(
-                        child: Padding(
-                          padding: EdgeInsets.only(left: 30.0),
-                          child: Expanded(
+
+                      InkWell(
+                        onTap: () => Navigator.push(context, MaterialPageRoute
+                          (builder: (context) => EditProfile(),),
+                        ),
+                        child: Flexible(
+                          child: Container(
+                            width: 200.0,
+                            padding: EdgeInsets.only(left: 15.0),
                             child: Text('Ananda Setya Kinanthi',
-                              style: TextStyle(
-                                fontFamily: 'Raleway',
-                                fontSize: 16,
-                                fontWeight: FontWeight.w600,
-                                color: Color.fromRGBO(46, 46, 46, 100),
+                              overflow: TextOverflow.fade,
+                              maxLines: 1,
+                              softWrap: false,
+                                style: TextStyle(
+                                  fontFamily: 'Raleway',
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w600,
+                                  color: Color.fromRGBO(46, 46, 46, 100),
+                                ),
                               ),
                             ),
                           ),
                         ),
-                      ),
-                      Padding(
-                        padding: EdgeInsets.only(left: 25.0),
-                        child: Icon(Icons.arrow_forward_ios_rounded),
-                      ),
+                        Padding(
+                            padding: EdgeInsets.only(left: 15.0),
+                            child: InkWell(
+                              child: Icon(Icons.arrow_forward_ios_rounded),
+                              onTap: () => Navigator.push(
+                                context, MaterialPageRoute(
+                                  builder: (context) => EditProfile(),
+                                ),
+                              ),
+                            )
+                        ),
                     ],
                   ),
                 ),
@@ -97,6 +113,7 @@ class HalamanProfile extends StatelessWidget {
                 ),
               ],
             ),
+          ),
         ),
     );
   }

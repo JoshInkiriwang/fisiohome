@@ -13,45 +13,47 @@ void main() {
 class HalamanArticle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-          title: new Text('Article'),
-          backgroundColor: Color.fromRGBO(95, 37, 224, 100),
-          actions: <Widget>[
-            IconButton(
-              icon: const Icon(Icons.search_outlined),
-              tooltip: 'Search',
-              iconSize: 30,
-              onPressed: () {
-                ScaffoldMessenger.of(context).showSnackBar(
-                    const SnackBar(content: Text('This is a search buttons')));
-              },
-            ),
-          ]),
-      body: ListView(
-        padding: EdgeInsets.symmetric(vertical: 15.0, horizontal: 15.0),
-        children: [
-          Article1(),
-          SizedBox(height: 5),
-          InkWell(
-            child: Article2(),
-            onTap: () => ScaffoldMessenger.of(context).showSnackBar(
-                SnackBar(content: Text('Article2 Pressed'))),
+    return SafeArea(
+        child: Scaffold(
+          appBar: AppBar(
+              title: new Text('Article'),
+              backgroundColor: Color.fromRGBO(95, 37, 224, 100),
+              actions: <Widget>[
+                IconButton(
+                  icon: const Icon(Icons.search_outlined),
+                  tooltip: 'Search',
+                  iconSize: 30,
+                  onPressed: () {
+                    ScaffoldMessenger.of(context).showSnackBar(
+                        const SnackBar(content: Text('This is a search buttons')));
+                  },
+                ),
+              ]),
+          body: ListView(
+            padding: EdgeInsets.symmetric(vertical: 15.0, horizontal: 15.0),
+            children: [
+              Article1(),
+              SizedBox(height: 5),
+              InkWell(
+                child: Article2(),
+                onTap: () => ScaffoldMessenger.of(context).showSnackBar(
+                    SnackBar(content: Text('Article2 Pressed'))),
+              ),
+              SizedBox(height: 5),
+              InkWell(
+                child: Article3(),
+                onTap: () => ScaffoldMessenger.of(context).showSnackBar(
+                    SnackBar(content: Text('Article3 Pressed'))),
+              ),
+              SizedBox(height: 5),
+              InkWell(
+                child: Article4(),
+                onTap: () => ScaffoldMessenger.of(context).showSnackBar(
+                    SnackBar(content: Text('Article4 Pressed'))),
+              ),
+            ],
           ),
-          SizedBox(height: 5),
-          InkWell(
-            child: Article3(),
-            onTap: () => ScaffoldMessenger.of(context).showSnackBar(
-                SnackBar(content: Text('Article3 Pressed'))),
-          ),
-          SizedBox(height: 5),
-          InkWell(
-            child: Article4(),
-            onTap: () => ScaffoldMessenger.of(context).showSnackBar(
-                SnackBar(content: Text('Article4 Pressed'))),
-          ),
-        ],
-      ),
+        ),
     );
   }
 }
