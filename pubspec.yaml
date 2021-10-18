@@ -52,10 +52,6 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-
-    # Asset untuk Welcome Screen
-    - assets/images/logoFisiohome.png
-
     # Asset untuk onBoarding screens
     - assets/images/Slider1.jpg
     - assets/images/Slider2.jpg
@@ -68,15 +64,17 @@ flutter:
     - assets/icons/point.png
 
     # Asset Icons
+    - assets/icons/logoFisiohome.png
     - assets/icons/IconKonsultasi.png
     - assets/icons/IconLifestyle.png
     - assets/icons/IconPaket.png
     - assets/icons/IconVisit.png
     - assets/icons/IconRiwayat.png
-
-    # Asset Halaman Visit Sekarang
     - assets/icons/LogoVisitSekarang.png
     - assets/icons/IconCalendar.png
+    - assets/icons/IconMassage.png
+    - assets/icons/IconPersonalFisioterapis.png
+    - assets/icons/IconEvent.png
 
     # Asset Article //Temporary
     - assets/images/Artikel1.jpg
@@ -84,7 +82,6 @@ flutter:
     - assets/images/Artikel3.jpg
     - assets/images/Artikel4.jpg
     - assets/images/DetailArtikel1.jpg
-
     - assets/images/Promo1.jpg
     - assets/images/Promo2.jpg
 

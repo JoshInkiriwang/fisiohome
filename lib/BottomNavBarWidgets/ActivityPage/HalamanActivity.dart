@@ -34,7 +34,7 @@ class HalamanActivity extends StatelessWidget {
         ),
         body: ListView(
           padding: EdgeInsets.symmetric(vertical: 25.0, horizontal: 20.0),
-          children: [
+          children: <Widget>[
             CardVisit(),
             Padding(
               padding: EdgeInsets.only(top: 10.0, bottom: 10.0),
@@ -51,7 +51,8 @@ class HalamanActivity extends StatelessWidget {
             ),
           ],
         ),
-      ));
+      ),
+    );
   }
 }
 
@@ -116,8 +117,8 @@ class CardPaket extends StatelessWidget {
           color: ActivityPageColor.ArrowForwardColor,
         ),
         subtitle: ReadMoreText(
-          'Pelayanan Fisioterapis yang akan sesegera mungkin datang ke rumah. '
-          'Setelah memesan, Fisioterapis terdekat akan segera datang ke rumah Kamu.',
+          'Untuk penanganan jangka panjang, Client bisa memilih layanan Visit '
+          'Paket, atur jadwal dan waktu kunjungan Fisioterapis sesuai keinginan.',
           trimLines: 3,
           colorClickableText: Colors.deepOrangeAccent,
           trimMode: TrimMode.Line,
@@ -154,8 +155,9 @@ class CardKonsultasi extends StatelessWidget {
           color: ActivityPageColor.ArrowForwardColor,
         ),
         subtitle: ReadMoreText(
-        'Pelayanan Fisioterapis yang akan sesegera mungkin datang ke rumah. '
-        'Setelah memesan, Fisioterapis terdekat akan segera datang ke rumah Kamu.',
+          'Untuk client yang ingin mendapatkan saran penanganan dan edukasi '
+          'latihan-latihan terkait keluhan gerak atau mau meningkatkan performa, '
+          'bisa menggunakan layanan Konsultasi, cliet kan terhubung dengan Fisioterapis secara langsung.',
         trimLines: 3,
         colorClickableText: Colors.deepOrangeAccent,
         trimMode: TrimMode.Line,
@@ -192,8 +194,9 @@ class CardLifestyle extends StatelessWidget {
           color: ActivityPageColor.ArrowForwardColor,
         ),
         subtitle: ReadMoreText(
-          'Pelayanan Fisioterapis yang akan sesegera mungkin datang ke rumah. '
-              'Setelah memesan, Fisioterapis terdekat akan segera datang ke rumah Kamu.',
+            'Untuk client yang ingin mendapatkan pelayanan personal Fisioterapis'
+            ' atlet atau pada event Anda, dapat memilih layanan Kita yang satu ini. '
+            'Dapatkan harga spesial dengan menghubungi admin Kami.',
           trimLines: 3,
           colorClickableText: Colors.deepOrangeAccent,
           trimMode: TrimMode.Line,
