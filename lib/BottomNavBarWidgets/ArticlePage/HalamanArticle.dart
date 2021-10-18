@@ -75,11 +75,15 @@ class Article1 extends StatelessWidget {
             ),
             SizedBox(height: 5.0),
             Align(
-              alignment: Alignment(0.9, 0),
-              child: Icon(Icons.more_horiz),
+              alignment: Alignment(0.96, 0),
+              child: PopupMenuButton<int> (
+                itemBuilder: (context) => [
+                  PopupMenuItem(child: Text('Share'), value: 1,)
+                ],
+              ),
             ),
             Container(
-              padding: EdgeInsets.only(left : 15.0, top: 10.0,right: 15.0,bottom: 10.0),
+              padding: EdgeInsets.only(left : 15.0,right: 15.0,bottom: 10.0),
               alignment: AlignmentDirectional.centerStart,
               child: Text('XXXXXXXXXXXXXXXXXXXXXXXXXXXXX',
                 style: TextStyle(fontSize: 14, fontWeight: FontWeight.w700)
@@ -112,11 +116,15 @@ class Article2 extends StatelessWidget {
           ),
           SizedBox(height: 5.0),
           Align(
-            alignment: Alignment(0.9, 0),
-            child: Icon(Icons.more_horiz),
+            alignment: Alignment(0.96, 0),
+            child: PopupMenuButton<int> (
+              itemBuilder: (context) => [
+                PopupMenuItem(child: Text('Share'), value: 1,)
+              ],
+            ),
           ),
           Container(
-            padding: EdgeInsets.only(left : 15.0, top: 10.0,right: 15.0,bottom: 10.0),
+            padding: EdgeInsets.only(left : 15.0,right: 15.0,bottom: 10.0),
             alignment: AlignmentDirectional.centerStart,
             child: Text('XXXXXXXXXXXXXXXXXXXXXXXXXXXXX',
                 style: TextStyle(fontSize: 14, fontWeight: FontWeight.w700)
@@ -148,11 +156,15 @@ class Article3 extends StatelessWidget {
           ),
           SizedBox(height: 5.0),
           Align(
-            alignment: Alignment(0.9, 0),
-            child: Icon(Icons.more_horiz),
+            alignment: Alignment(0.96, 0),
+            child: PopupMenuButton<int> (
+              itemBuilder: (context) => [
+                PopupMenuItem(child: Text('Share'), value: 1,)
+              ],
+            ),
           ),
           Container(
-            padding: EdgeInsets.only(left : 15.0, top: 10.0,right: 15.0,bottom: 10.0),
+            padding: EdgeInsets.only(left : 15.0,right: 15.0,bottom: 10.0),
             alignment: AlignmentDirectional.centerStart,
             child: Text('XXXXXXXXXXXXXXXXXXXXXXXXXXXXX',
                 style: TextStyle(fontSize: 14, fontWeight: FontWeight.w700)
@@ -206,3 +218,4 @@ class Article4 extends StatelessWidget {
     );
   }
 }
+
