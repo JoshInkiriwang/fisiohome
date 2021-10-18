@@ -1,7 +1,7 @@
 import 'package:FisioHome/ActivityWidgets/HalamanKonsultasi.dart';
-import 'package:FisioHome/ActivityWidgets/HalamanLifestyle.dart';
+import 'package:FisioHome/ActivityWidgets/Lifestyle%20Path/HalamanLifestyle.dart';
 import 'package:FisioHome/ActivityWidgets/HalamanPaket.dart';
-import 'package:FisioHome/ActivityWidgets/HalamanVisit.dart';
+import 'package:FisioHome/ActivityWidgets/Visit%20Path/HalamanVisit.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';

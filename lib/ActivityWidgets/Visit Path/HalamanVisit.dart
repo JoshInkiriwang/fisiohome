@@ -32,17 +32,17 @@ class _HalamanVisitState extends State<HalamanVisit> {
     return Scaffold(
       appBar: AppBar(
         leading: Padding(
-          padding: EdgeInsets.only(left: 30.0,right: 0.0),
-          child: Image.asset('assets/icons/LogoVisitSekarang.png'),
+          padding: EdgeInsets.only(left: 30.0),
+          child: Image.asset('assets/icons/logoFisiohome2.png'),
         ),
-        title: new Text('Visit Sekarang'),
+        title: Text('Visit Sekarang'),
         backgroundColor: Color.fromRGBO(95, 37, 224, 100),
       ),
 
       body: Form(
         key: _visitformKey,
         child: Container(
-          padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 30.0),
+          padding: EdgeInsets.symmetric(vertical: 30.0, horizontal: 30.0),
             child: SingleChildScrollView(
               child: Column(
                 children: <Widget>[
@@ -60,7 +60,7 @@ class _HalamanVisitState extends State<HalamanVisit> {
                     ),
                   ),
 
-                  SizedBox(height: 10.0),
+                  SizedBox(height: 15.0),
 
                   //Usia Pasien
                   TextFormField(
@@ -76,7 +76,7 @@ class _HalamanVisitState extends State<HalamanVisit> {
                     ),
                   ),
 
-                  SizedBox(height: 10.0),
+                  SizedBox(height: 15.0),
 
                   //Jenis Kelamin
                   TextFormField(
@@ -92,7 +92,7 @@ class _HalamanVisitState extends State<HalamanVisit> {
                     ),
                   ),
 
-                  SizedBox(height: 10.0),
+                  SizedBox(height: 15.0),
 
                   //Keluhan Utama
                   TextFormField(
@@ -108,7 +108,7 @@ class _HalamanVisitState extends State<HalamanVisit> {
                     ),
                   ),
 
-                  SizedBox(height: 10.0),
+                  SizedBox(height: 15.0),
 
                   //Keluhan Sejak
                   TextFormField(
@@ -143,7 +143,7 @@ class _HalamanVisitState extends State<HalamanVisit> {
                     },
                   ),
 
-                  SizedBox(height: 10.0),
+                  SizedBox(height: 15.0),
 
                   //Diagnosa Dokter (Jika Ada)
                   TextFormField(
@@ -159,7 +159,7 @@ class _HalamanVisitState extends State<HalamanVisit> {
                     ),
                   ),
 
-                  SizedBox(height: 10.0),
+                  SizedBox(height: 15.0),
 
                   //Kondisi Pasien Sekarang
                   TextFormField(
@@ -175,7 +175,7 @@ class _HalamanVisitState extends State<HalamanVisit> {
                     ),
                   ),
 
-                  SizedBox(height: 10.0),
+                  SizedBox(height: 15.0),
 
                   //Permintaan Khusus
                   TextFormField(
@@ -196,7 +196,7 @@ class _HalamanVisitState extends State<HalamanVisit> {
                     ),
                   ),
 
-                  SizedBox(height: 10.0),
+                  SizedBox(height: 15.0),
 
                   //Pilih Tanggal Terapi
                   TextFormField(

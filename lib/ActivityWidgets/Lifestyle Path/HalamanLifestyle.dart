@@ -1,20 +1,21 @@
+import 'package:FisioHome/ActivityWidgets/Lifestyle%20Path/personalFisioterapisPage.dart';
 import 'package:FisioHome/BottomNavBarWidgets/ActivityPage/ActivityPageColor.dart';
 import 'package:FisioHome/BottomNavBarWidgets/ActivityPage/ActivityPageTextStyle.dart';
 import 'package:FisioHome/ColorPalette.dart';
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(new MaterialApp(
-    title: 'Lifestyle',
-    home: new HalamanLifestyle(),
-  ));
-}
+import 'EventPage.dart';
+import 'MassagePage.dart';
 
 class HalamanLifestyle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: Padding(
+          padding: EdgeInsets.only(left: 30.0),
+          child: Image.asset('assets/icons/logoFisiohome2.png'),
+        ),
         title: new Text('Lifestyle'),
         backgroundColor: ColorPalette.appBarColor,
       ),
@@ -47,7 +48,9 @@ class CardMassage extends StatelessWidget {
       child: ListTile(
         minVerticalPadding: 26.0,
         leading: ElevatedButton(
-          onPressed: () {},
+          onPressed: () => Navigator.push(
+              context, MaterialPageRoute(builder: (context) => MassagePage()),
+          ),
           child: Image.asset('assets/icons/IconMassage.png'),
           style: ElevatedButton.styleFrom(
             shape: CircleBorder(),
@@ -60,7 +63,9 @@ class CardMassage extends StatelessWidget {
           Icons.arrow_forward_ios_rounded,
           color: ActivityPageColor.ArrowForwardColor,
         ),
-        onTap: () {},
+        onTap: () => Navigator.push(
+          context, MaterialPageRoute(builder: (context) => MassagePage()),
+        ),
       ),
     );
   }
@@ -74,7 +79,9 @@ class CardPersonalFisioterapis extends StatelessWidget {
       child: ListTile(
         minVerticalPadding: 26.0,
         leading: ElevatedButton(
-          onPressed: () {},
+          onPressed: () => Navigator.push(
+            context, MaterialPageRoute(builder: (context) => PersonalFisioterapisPage()),
+          ),
           child: Image.asset('assets/icons/IconPersonalFisioterapis.png'),
           style: ElevatedButton.styleFrom(
             shape: CircleBorder(),
@@ -87,7 +94,9 @@ class CardPersonalFisioterapis extends StatelessWidget {
           Icons.arrow_forward_ios_rounded,
           color: ActivityPageColor.ArrowForwardColor,
         ),
-        onTap: () {},
+        onTap: () => Navigator.push(
+          context, MaterialPageRoute(builder: (context) => PersonalFisioterapisPage()),
+        ),
       ),
     );
   }
@@ -101,7 +110,9 @@ class CardEvent extends StatelessWidget {
       child: ListTile(
         minVerticalPadding: 26.0,
         leading: ElevatedButton(
-          onPressed: () {},
+          onPressed: () => Navigator.push(
+            context, MaterialPageRoute(builder: (context) => EventPage()),
+          ),
           child: Image.asset('assets/icons/IconEvent.png'),
           style: ElevatedButton.styleFrom(
             shape: CircleBorder(),
@@ -114,7 +125,9 @@ class CardEvent extends StatelessWidget {
           Icons.arrow_forward_ios_rounded,
           color: ActivityPageColor.ArrowForwardColor,
         ),
-        onTap: () {},
+        onTap: () => Navigator.push(
+          context, MaterialPageRoute(builder: (context) => EventPage()),
+        ),
       ),
     );
   }

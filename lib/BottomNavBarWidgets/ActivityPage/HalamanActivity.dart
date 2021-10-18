@@ -3,10 +3,10 @@ import 'package:readmore/readmore.dart';
 import 'ActivityPageTextStyle.dart';
 import 'package:FisioHome/ColorPalette.dart';
 import 'package:flutter/material.dart';
-import '../../ActivityWidgets/HalamanVisit.dart';
+import '../../ActivityWidgets/Visit Path/HalamanVisit.dart';
 import '../../ActivityWidgets/HalamanPaket.dart';
 import '../../ActivityWidgets/HalamanKonsultasi.dart';
-import '../../ActivityWidgets/HalamanLifestyle.dart';
+import '../../ActivityWidgets/Lifestyle Path/HalamanLifestyle.dart';
 import '../../ActivityWidgets/HalamanRiwayat.dart';
 import 'ActivityPageColor.dart';
 
