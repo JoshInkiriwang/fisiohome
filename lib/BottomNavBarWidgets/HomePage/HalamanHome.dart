@@ -47,7 +47,7 @@ class _HalamanHomeState extends State<HalamanHome> {
                   child: ArticleSection(),
                 ),
                 Container(
-                  padding: EdgeInsets.fromLTRB(25, 1330, 10, 0),
+                  padding: EdgeInsets.fromLTRB(25, 1380, 10, 0),
                   child: PromoSection(),
                 ),
               ],

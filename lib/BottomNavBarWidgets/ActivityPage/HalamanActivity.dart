@@ -1,3 +1,5 @@
+import 'package:readmore/readmore.dart';
+
 import 'ActivityPageTextStyle.dart';
 import 'package:FisioHome/ColorPalette.dart';
 import 'package:flutter/material.dart';
@@ -75,9 +77,16 @@ class CardVisit extends StatelessWidget {
           Icons.arrow_forward_ios_rounded,
           color: ActivityPageColor.ArrowForwardColor,
         ),
-        subtitle: Text('Pelayanan Fisioterapis yang akan sesegera mungkin datang '
-            'ke rumah. Setelah memesan, Fisioterapis terdekat akan segera datang '
-            'ke rumah Kamu.', style: ActivityPageTextStyle.subtitlecard),
+        subtitle: ReadMoreText(
+            'Pelayanan Fisioterapis yang akan sesegera mungkin datang ke rumah. '
+            'Setelah memesan, Fisioterapis terdekat akan segera datang ke rumah Kamu.',
+            trimLines: 3,
+            colorClickableText: Colors.deepOrangeAccent,
+            trimMode: TrimMode.Line,
+            trimCollapsedText: 'Show More',
+            trimExpandedText: 'Show Less',
+            style: ActivityPageTextStyle.subtitlecard,
+        ),
         onTap: () => Navigator.push(
             context, MaterialPageRoute(builder: (context) => HalamanVisit())),
       ),
@@ -106,9 +115,16 @@ class CardPaket extends StatelessWidget {
           Icons.arrow_forward_ios_rounded,
           color: ActivityPageColor.ArrowForwardColor,
         ),
-        subtitle: Text('Untuk penanganan jangka panjang, Client bisa memilih '
-            'layanan Visit Paket, atur jadwal dan waktu kunjungan Fisioterapis '
-            'sesuai keinginan.', style: ActivityPageTextStyle.subtitlecard),
+        subtitle: ReadMoreText(
+          'Pelayanan Fisioterapis yang akan sesegera mungkin datang ke rumah. '
+          'Setelah memesan, Fisioterapis terdekat akan segera datang ke rumah Kamu.',
+          trimLines: 3,
+          colorClickableText: Colors.deepOrangeAccent,
+          trimMode: TrimMode.Line,
+          trimCollapsedText: 'Show More',
+          trimExpandedText: 'Show Less',
+          style: ActivityPageTextStyle.subtitlecard,
+        ),
         onTap: () => Navigator.push(
             context, MaterialPageRoute(builder: (context) => HalamanPaket())),
       ),
@@ -137,12 +153,16 @@ class CardKonsultasi extends StatelessWidget {
           Icons.arrow_forward_ios_rounded,
           color: ActivityPageColor.ArrowForwardColor,
         ),
-        subtitle: Text('Untuk client yang ingin mendapatkan saran penanganan '
-            'dan edukasi latihan-latihan terkait keluhan gerak atau mau '
-            'meningkatkan performa, bisa menggunakan layanan Konsultasi, cliet '
-            'kan terhubung dengan Fisioterapis secara langsung.',
-            style: ActivityPageTextStyle.subtitlecard
-        ),
+        subtitle: ReadMoreText(
+        'Pelayanan Fisioterapis yang akan sesegera mungkin datang ke rumah. '
+        'Setelah memesan, Fisioterapis terdekat akan segera datang ke rumah Kamu.',
+        trimLines: 3,
+        colorClickableText: Colors.deepOrangeAccent,
+        trimMode: TrimMode.Line,
+        trimCollapsedText: 'Show More',
+        trimExpandedText: 'Show Less',
+        style: ActivityPageTextStyle.subtitlecard,
+      ),
         onTap: () => Navigator.push(context,
             MaterialPageRoute(builder: (context) => HalamanKonsultasi())),
       ),
@@ -171,10 +191,15 @@ class CardLifestyle extends StatelessWidget {
           Icons.arrow_forward_ios_rounded,
           color: ActivityPageColor.ArrowForwardColor,
         ),
-        subtitle: Text('Untuk client yang ingin mendapatkan pelayanan personal '
-            'Fisioterapis atlet atau pada event Anda, dapat memilih layanan Kita'
-            ' yang satu ini. Dapatkan harga spesial dengan menghubungi admin Kami.',
-            style: ActivityPageTextStyle.subtitlecard
+        subtitle: ReadMoreText(
+          'Pelayanan Fisioterapis yang akan sesegera mungkin datang ke rumah. '
+              'Setelah memesan, Fisioterapis terdekat akan segera datang ke rumah Kamu.',
+          trimLines: 3,
+          colorClickableText: Colors.deepOrangeAccent,
+          trimMode: TrimMode.Line,
+          trimCollapsedText: 'Show More',
+          trimExpandedText: 'Show Less',
+          style: ActivityPageTextStyle.subtitlecard,
         ),
         onTap: () => Navigator.push(context,
             MaterialPageRoute(builder: (context) => HalamanLifestyle())),
