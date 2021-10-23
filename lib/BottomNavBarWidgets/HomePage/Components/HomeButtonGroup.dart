@@ -14,6 +14,7 @@ class _HomeButtonGroupState extends State<HomeButtonGroup>{
   Widget build(BuildContext context) {
     return Container(
       height: 50,
+      width: 340,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(5),
         color: Colors.white,

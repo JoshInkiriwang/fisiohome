@@ -2,6 +2,7 @@ import 'package:FisioHome/ActivityWidgets/HalamanKonsultasi.dart';
 import 'package:FisioHome/ActivityWidgets/Lifestyle%20Path/HalamanLifestyle.dart';
 import 'package:FisioHome/ActivityWidgets/HalamanPaket.dart';
 import 'package:FisioHome/ActivityWidgets/Visit%20Path/HalamanVisit.dart';
+import 'package:FisioHome/BottomNavBarWidgets/HomePage/Components/FourButtons/FourButtonsStyle.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
@@ -41,12 +42,14 @@ class FourButton extends StatelessWidget {
                 ),
               ),
 
-              SizedBox(height: 5,),
-
-              const Text('Visit', style: TextStyle(fontWeight: FontWeight.w500, fontSize: 12),),
+              Padding(
+                padding: EdgeInsets.only(top: 8),
+                child: Text('Visit', style: FourButtonsStyle.btnTextStyle),
+              ),
             ],
           ),
 
+          // Tombol Paket
           Column(
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -71,12 +74,14 @@ class FourButton extends StatelessWidget {
                 ),
               ),
 
-              SizedBox(height: 5),
-
-              const Text('Paket', style: TextStyle(fontWeight: FontWeight.w500, fontSize: 12),),
+              Padding(
+                padding: EdgeInsets.only(top: 8),
+                child: Text('Paket', style: FourButtonsStyle.btnTextStyle),
+              ),
             ],
           ),
 
+          // Tombol Lifestyle
           Column(
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -101,12 +106,14 @@ class FourButton extends StatelessWidget {
                 ),
               ),
 
-              SizedBox(height: 5),
-
-              const Text('Lifestyle', style: TextStyle(fontWeight: FontWeight.w500, fontSize: 12),),
+              Padding(
+                padding: EdgeInsets.only(top: 8),
+                child: Text('Lifestyle', style: FourButtonsStyle.btnTextStyle),
+              ),
             ],
           ),
 
+          // Tombol Konsultasi
           Column(
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -131,9 +138,10 @@ class FourButton extends StatelessWidget {
                 ),
               ),
 
-              SizedBox(height: 5),
-
-              const Text('Konsultasi', style: TextStyle(fontWeight: FontWeight.w500, fontSize: 12),),
+              Padding(
+                padding: EdgeInsets.only(top: 8),
+                child: Text('Konsultasi', style: FourButtonsStyle.btnTextStyle),
+              ),
             ],
           ),
         ],

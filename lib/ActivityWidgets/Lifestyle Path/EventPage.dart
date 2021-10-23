@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 class EventPage extends StatefulWidget {
   const EventPage({Key? key}) : super(key: key);
@@ -140,7 +141,9 @@ class _EventPageState extends State<EventPage> {
                 //Tanggal Pelaksanaan
                 TextFormField(
                   controller: _tanggalPelaksanaan,
+                  readOnly: true,
                   decoration: new InputDecoration(
+                    suffixIcon: Icon(Icons.event_rounded),
                     border: OutlineInputBorder(
                       borderSide: BorderSide(
                         color: Color.fromRGBO(217, 223, 229, 100),
@@ -150,6 +153,22 @@ class _EventPageState extends State<EventPage> {
                     hintText: 'dd-mm-yyyy',
                     labelText: 'Tanggal Pelaksanaan',
                   ),
+                  onTap: () async{
+                    DateTime? pickedDate = await showDatePicker(
+                      context: context,
+                      initialDate: DateTime.now(),
+                      firstDate: DateTime.now(),
+                      lastDate: DateTime(2100),
+                      cancelText: 'Cancel',
+                    );
+
+                    if (pickedDate != null) {
+                      setState(() {
+                        String formattedDate = DateFormat('dd-MM-yyyy').format(pickedDate);
+                        _tanggalPelaksanaan.text = formattedDate;
+                      });
+                    }
+                  },
                 ),
 
                 SizedBox(height: 15.0),
@@ -158,6 +177,7 @@ class _EventPageState extends State<EventPage> {
                 TextFormField(
                   controller: _waktuPelaksanaan,
                   decoration: new InputDecoration(
+                    suffixIcon: Icon(Icons.schedule_rounded),
                     border: OutlineInputBorder(
                       borderSide: BorderSide(
                         color: Color.fromRGBO(217, 223, 229, 100),
@@ -167,6 +187,7 @@ class _EventPageState extends State<EventPage> {
                     hintText: 'hh-mm',
                     labelText: 'Waktu Pelaksanaan',
                   ),
+                  onTap: () {}
                 ),
 
                 SizedBox(height: 15.0),
@@ -203,12 +224,27 @@ class _EventPageState extends State<EventPage> {
                   ),
                 ),
 
-                SizedBox(height: 15.0),
+                SizedBox(height: 35.0),
 
                 //Tombol "Lanjutkan Pemesanan"
-                TextButton(
-                  onPressed: () {},
-                  child : Text('Lanjutkan Pemesanan'),
+                Container(
+                  child: TextButton(
+                    onPressed: () {},
+                    child : Text('Lanjutkan Pemesanan', style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 20,
+                      fontWeight: FontWeight.w700,
+                      fontFamily: 'Raleway',
+                      ),
+                    ),
+                    style: TextButton.styleFrom(
+                      backgroundColor: Color.fromRGBO(95, 37, 224, 100),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      minimumSize: Size(328.0, 58.0),
+                    ),
+                  ),
                 ),
               ],
             ),

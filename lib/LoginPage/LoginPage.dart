@@ -51,7 +51,7 @@ class _LoginPageState extends State<LoginPage> {
                 width: MediaQuery.of(context).size.width/3,
                 color: Colors.blue,
                 child: TextButton(
-                  onPressed: (){
+                  onPressed: () {
                     print(_emailCtrl.text);
                     print(_pwdCtrl.text);
                     Navigator.pushReplacement(

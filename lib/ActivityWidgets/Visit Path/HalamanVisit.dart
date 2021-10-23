@@ -234,9 +234,24 @@ class _HalamanVisitState extends State<HalamanVisit> {
                   SizedBox(height: 15.0),
 
                   //Tombol "Lanjutkan Pemesanan"
-                  TextButton(
-                    onPressed: () {},
-                    child : Text('Lanjutkan Pemesanan'),
+                  Container(
+                    child: TextButton(
+                      onPressed: () {},
+                      child : Text('Lanjutkan Pemesanan', style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 20,
+                          fontWeight: FontWeight.w700,
+                          fontFamily: 'Raleway',
+                        ),
+                      ),
+                      style: TextButton.styleFrom(
+                        backgroundColor: Color.fromRGBO(95, 37, 224, 100),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        minimumSize: Size(328.0, 58.0),
+                      ),
+                    ),
                   ),
                 ],
               ),
