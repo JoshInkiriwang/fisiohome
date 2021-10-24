@@ -1,4 +1,5 @@
 import 'package:FisioHome/BottomNavBar.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatefulWidget {
@@ -13,6 +14,14 @@ class _LoginPageState extends State<LoginPage> {
   TextEditingController _pwdCtrl = TextEditingController();
 
   final _loginFormKey = GlobalKey<FormState>();
+
+  Future<void> _signInAnonymously() async {
+    try {
+      await FirebaseAuth.instance.signInAnonymously();
+    } catch (e) {
+      print(e);
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -58,6 +67,17 @@ class _LoginPageState extends State<LoginPage> {
                         context, MaterialPageRoute(builder: (context) => BottomNav()));
                   },
                   child: Text('Login', style: TextStyle(color: Colors.white),),
+                ),
+              ),
+
+              SizedBox(height: 10.0),
+
+              Center(
+                child: TextButton(
+                  child: Text('Sign In Anonymously'),
+                  onPressed: () {
+                    _signInAnonymously();
+                  },
                 ),
               ),
             ],
