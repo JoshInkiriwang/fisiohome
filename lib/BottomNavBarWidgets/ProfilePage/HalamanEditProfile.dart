@@ -70,11 +70,8 @@ class _EditProfileState extends State<EditProfile> {
               ),
             ],
           ),
-         Row(
-          children: <Widget>[
-            
-          ],
-         ),
+          Row(children: [Text('Nama')],),
+          Row(children: [Text('Ananda Setya Kinanthi')]),
         ],
       ),
     );
