@@ -70,8 +70,74 @@ class _EditProfileState extends State<EditProfile> {
               ),
             ],
           ),
-          Row(children: [Text('Nama')],),
-          Row(children: [Text('Ananda Setya Kinanthi')]),
+          Expanded(
+            child: ListView(
+              padding: EdgeInsets.all(20.0),
+              children: <Widget>[
+                Card(
+                  elevation: 0,
+                  child: Padding(
+                    padding: EdgeInsets.all(10.0),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        Text('Nama',
+                          style: TextStyle(
+                            fontFamily: 'Raleway',
+                            fontWeight: FontWeight.w600,
+                            fontSize: 16,
+                            color: Color.fromRGBO(180, 180, 180, 100),
+                          ),
+                        ),
+                        SizedBox(height: 15),
+                        Text('Ananda Setya Kinanthi',
+                          style: TextStyle(
+                            fontFamily: 'Raleway',
+                            fontWeight: FontWeight.w700,
+                            fontSize: 16,
+                            color: Color.fromRGBO(46, 46, 46, 100),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                Divider(
+                  color: Color.fromRGBO(214, 214, 214, 100),
+                ),
+                Card(
+                  elevation: 0,
+                  child: Padding(
+                    padding: EdgeInsets.all(10.0),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        Text('Tanggal Lahir',
+                          style: TextStyle(
+                            fontFamily: 'Raleway',
+                            fontWeight: FontWeight.w600,
+                            fontSize: 16,
+                            color: Color.fromRGBO(180, 180, 180, 100),
+                          ),
+                        ),
+                        SizedBox(height: 15),
+                        Text('18/09/1994',
+                          style: TextStyle(
+                            fontFamily: 'Raleway',
+                            fontWeight: FontWeight.w700,
+                            fontSize: 16,
+                            color: Color.fromRGBO(46, 46, 46, 100),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
         ],
       ),
     );
