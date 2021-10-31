@@ -13,36 +13,33 @@ void main() {
 class HalamanProfile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-        child: Scaffold(
+    return Scaffold(
           appBar: AppBar(
             title: new Text('Profile'),
             backgroundColor: Color.fromRGBO(95, 37, 224, 100),
           ),
-          body: Container(
+          body: Padding(
             padding: EdgeInsets.all(20.0),
             child: Column(
               children: <Widget>[
-                Container(
-                  height: 150.0,
-                  child: Row(
-                    children: <Widget>[
-                      Column(
-                        children: <Widget>[
-                          CircleAvatar(
-                            radius: 51,
-                            backgroundImage: NetworkImage(
-                                'https://www.rd.com/wp-content/uploads/2017/09/'
-                                    '01-shutterstock_476340928-Irina-Bg.jpg?'
-                                    'resize=1024,683'
-                            ),
+                Row(
+                  children: <Widget>[
+                    Column(
+                      children: <Widget>[
+                        CircleAvatar(
+                          radius: 51,
+                          backgroundImage: NetworkImage(
+                            'https://www.rd.com/wp-content/uploads/2017/09/'
+                              '01-shutterstock_476340928-Irina-Bg.jpg?'
+                                  'resize=1024,683'
                           ),
-                          TextButton(
-                            onPressed: () {},
-                            child: Text('Edit Foto'),
-                          ),
-                        ],
-                      ),
+                        ),
+                        TextButton(
+                          onPressed: () {},
+                          child: Text('Edit Foto'),
+                        ),
+                      ],
+                    ),
 
                       InkWell(
                         onTap: () => Navigator.push(context, MaterialPageRoute
@@ -79,7 +76,6 @@ class HalamanProfile extends StatelessWidget {
                         ),
                     ],
                   ),
-                ),
                 const Divider(
                   height: 20,
                   thickness: 2,
@@ -114,7 +110,6 @@ class HalamanProfile extends StatelessWidget {
               ],
             ),
           ),
-        ),
-    );
+        );
   }
 }

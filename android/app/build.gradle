@@ -52,6 +52,12 @@ android {
     }
 }
 
+rootProject.ext {
+    set('FlutterFire', [
+            FirebaseSDKVersion: '28.4.1'
+    ])
+}
+
 flutter {
     source '../..'
 }

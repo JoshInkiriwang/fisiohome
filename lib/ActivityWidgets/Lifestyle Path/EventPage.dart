@@ -176,6 +176,7 @@ class _EventPageState extends State<EventPage> {
                 //Waktu Pelaksanaan
                 TextFormField(
                   controller: _waktuPelaksanaan,
+                  readOnly: true,
                   decoration: new InputDecoration(
                     suffixIcon: Icon(Icons.schedule_rounded),
                     border: OutlineInputBorder(
@@ -187,36 +188,54 @@ class _EventPageState extends State<EventPage> {
                     hintText: 'hh-mm',
                     labelText: 'Waktu Pelaksanaan',
                   ),
-                  onTap: () {}
+                  onTap: () async {
+                    TimeOfDay time = TimeOfDay.now();
+                    FocusScope.of(context).requestFocus(new FocusNode());
+
+                    TimeOfDay? pickedTime =
+                        await showTimePicker(context: context, initialTime: time);
+                    if (pickedTime != null && pickedTime != time) {
+                      _waktuPelaksanaan.text = pickedTime.toString();
+                      setState(() {
+                        time = pickedTime;
+                      });
+                    }
+                  },
+                  validator: (value) {
+                    if (value!.isEmpty) {
+                      return 'Waktu Pelaksanaan tidak bisa kosong';
+                    }
+                    return null;
+                  },
                 ),
 
-                SizedBox(height: 15.0),
+                    SizedBox(height: 15.0),
 
-                //Jam Kumpul Fisioterapis
+                  //Jam Kumpul Fisioterapis
                 TextFormField(
                   controller: _jamKumpulFisioterapis,
                   decoration: new InputDecoration(
-                    border: OutlineInputBorder(
-                      borderSide: BorderSide(
-                        color: Color.fromRGBO(217, 223, 229, 100),
-                      ),
-                      borderRadius: BorderRadius.circular(5.0),
+                  border: OutlineInputBorder(
+                    borderSide: BorderSide(
+                      color: Color.fromRGBO(217, 223, 229, 100),
                     ),
-                    hintText: 'Masukan Jam Kumpul Fisioterapis',
-                    labelText: 'Jam Kumpul Fisioterapis',
+                    borderRadius: BorderRadius.circular(5.0),
+                  ),
+                  hintText: 'Masukan Jam Kumpul Fisioterapis',
+                  labelText: 'Jam Kumpul Fisioterapis',
                   ),
                 ),
 
-                SizedBox(height: 15.0),
+                    SizedBox(height: 15.0),
 
-                //No. LO Event
+                    //No. LO Event
                 TextFormField(
                   controller: _noLOEvent,
                   decoration: new InputDecoration(
                     border: OutlineInputBorder(
-                      borderSide: BorderSide(
-                        color: Color.fromRGBO(217, 223, 229, 100),
-                      ),
+                    borderSide: BorderSide(
+                      color: Color.fromRGBO(217, 223, 229, 100),
+                    ),
                       borderRadius: BorderRadius.circular(5.0),
                     ),
                     hintText: 'Masukan nomor LO Event',

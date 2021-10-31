@@ -1,11 +1,11 @@
-import 'package:flutter/material.dart';
 import 'package:FisioHome/IntroLogoOnly.dart';
+import 'package:flutter/material.dart';
 
 void main() {
-  runApp(FisiohomeApp());
+  runApp(MyApp());
 }
 
-class FisiohomeApp extends StatelessWidget {
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
