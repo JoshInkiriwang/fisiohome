@@ -9,7 +9,7 @@ class HalamanChat extends StatefulWidget {
 
 class _HalamanChatState extends State<HalamanChat> {
   List<ChatUsers> chatUsers = [
-    ChatUsers(name: "Sukarman EasyMan", messageText: "Hello World, Program to work and not to feel", imageURL: "https://imedica.brainstormforce.com/wp-content/uploads/2015/02/doc1.jpg", time: "13.30"),
+    ChatUsers(name: "Sukarman EasyMan", messageText: "Ada yang bisa saya bantu ?", imageURL: "https://imedica.brainstormforce.com/wp-content/uploads/2015/02/doc1.jpg", time: "13.30"),
     ChatUsers(name: "Jane MoonShine", messageText: "Hi ! How are you", imageURL: "http://wwsthemes.com/themes/medwise/v1.3/images/doctor-single.jpg", time: "Yesterday"),
   ];
 
