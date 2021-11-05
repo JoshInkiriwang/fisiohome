@@ -195,7 +195,7 @@ class _EventPageState extends State<EventPage> {
                     TimeOfDay? pickedTime =
                         await showTimePicker(context: context, initialTime: time);
                     if (pickedTime != null && pickedTime != time) {
-                      _waktuPelaksanaan.text = pickedTime.toString();
+                      _waktuPelaksanaan.text = pickedTime.format(context).toString();
                       setState(() {
                         time = pickedTime;
                       });
