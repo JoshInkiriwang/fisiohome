@@ -43,6 +43,7 @@ class _AuthFormState extends State<AuthForm> {
       child: Column(
         children: [
           TextFormField(
+            key: Key('email'),
             decoration: InputDecoration(
               labelText: 'Email',
               border: OutlineInputBorder(),
@@ -58,6 +59,7 @@ class _AuthFormState extends State<AuthForm> {
           SizedBox(height: 15),
           if (!_isLogin)
             TextFormField(
+              key: Key('username'),
               decoration: InputDecoration(
                 labelText: 'Username',
                 border: OutlineInputBorder(),
@@ -78,6 +80,7 @@ class _AuthFormState extends State<AuthForm> {
               height: 15,
             ),
           TextFormField(
+            key: Key('password'),
             obscureText: true,
             decoration: InputDecoration(
               labelText: 'Password',
