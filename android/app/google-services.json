@@ -14,14 +14,6 @@
       },
       "oauth_client": [
         {
-          "client_id": "742489042793-n10qhrdtedqrmt78723vjf7nlci4pa3s.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.fisiohome.apps",
-            "certificate_hash": "1dff64c71d7ae296e1cbdefed2c41ea39dc020d2"
-          }
-        },
-        {
           "client_id": "742489042793-5mi5hqdidll2mb8dt3avtgqf75v8bm2d.apps.googleusercontent.com",
           "client_type": 3
         }
