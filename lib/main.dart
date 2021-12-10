@@ -2,6 +2,7 @@ import 'package:FisioHome/ActivityWidgets/HalamanPaket.dart';
 import 'package:FisioHome/ActivityWidgets/HalamanRiwayat.dart';
 import 'package:FisioHome/ActivityWidgets/Lifestyle Path/personalFisioterapisPage.dart';
 import 'package:FisioHome/ActivityWidgets/Lifestyle%20Path/EventPage.dart';
+import 'package:FisioHome/BottomNavBar.dart';
 import 'package:FisioHome/BottomNavBarWidgets/ActivityPage/HalamanActivity.dart';
 import 'package:FisioHome/BottomNavBarWidgets/ArticlePage/Detail%20Article.dart';
 import 'package:FisioHome/BottomNavBarWidgets/ArticlePage/HalamanArticle.dart';
@@ -11,6 +12,7 @@ import 'package:FisioHome/BottomNavBarWidgets/ProfilePage/HalamanProfile.dart';
 import 'package:FisioHome/IntroLogoOnly.dart';
 import 'package:FisioHome/LoginSection/screens/auth_screen.dart';
 import 'package:FisioHome/OnBoarding/OnBoarding.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
@@ -30,7 +32,16 @@ class MyApp extends StatelessWidget {
         routes: {
           '/': (context) => LogoOnlyPage(),
           '/onboarding': (context) => OnBoarding(),
-          '/login': (context) => AuthScreen(),
+          '/authScreen': (context) => StreamBuilder(
+                builder: (context, authSnapshot) {
+                  if (authSnapshot.data == null) {
+                    return AuthScreen();
+                  } else {
+                    return BottomNav();
+                  }
+                },
+                stream: FirebaseAuth.instance.authStateChanges(),
+              ),
           // Register
           '/home': (context) => HalamanHome(),
           '/activitypage': (context) => HalamanActivity(),

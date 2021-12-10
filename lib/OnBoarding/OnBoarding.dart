@@ -55,7 +55,7 @@ class OnBoarding extends StatelessWidget {
             style: OnBoardingBtnStyle.nextdoneBtnStyle,
           ),
           onDone: () {
-            Navigator.pushReplacementNamed(context, '/login');
+            Navigator.pushReplacementNamed(context, '/authScreen');
           },
 
           next: Text(
@@ -68,7 +68,7 @@ class OnBoarding extends StatelessWidget {
             style: OnBoardingBtnStyle.skipBtnStyle,
           ),
           onSkip: () {
-            Navigator.pushReplacementNamed(context, '/login');
+            Navigator.pushReplacementNamed(context, '/authScreen');
           },
 
           //Dot Indicator Style
