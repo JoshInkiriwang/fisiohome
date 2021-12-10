@@ -5,13 +5,6 @@ import 'BottomNavBarWidgets/ArticlePage/HalamanArticle.dart';
 import 'BottomNavBarWidgets/ChatPage/HalamanChat.dart';
 import 'BottomNavBarWidgets/ProfilePage/HalamanProfile.dart';
 
-void main() {
-  runApp(new MaterialApp(
-    title: 'Fisiohome',
-    home: new BottomNav(),
-  ));
-}
-
 class BottomNav extends StatefulWidget {
   @override
   _BottomNavState createState() => _BottomNavState();

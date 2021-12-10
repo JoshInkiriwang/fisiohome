@@ -26,33 +26,34 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: 'Fisiohome',
-        debugShowCheckedModeBanner: false,
-        initialRoute: '/',
-        routes: {
-          '/': (context) => LogoOnlyPage(),
-          '/onboarding': (context) => OnBoarding(),
-          '/authScreen': (context) => StreamBuilder(
-                builder: (context, authSnapshot) {
-                  if (authSnapshot.data == null) {
-                    return AuthScreen();
-                  } else {
-                    return BottomNav();
-                  }
-                },
-                stream: FirebaseAuth.instance.authStateChanges(),
-              ),
-          // Register
-          '/home': (context) => HalamanHome(),
-          '/activitypage': (context) => HalamanActivity(),
-          '/articlepage': (context) => HalamanArticle(),
-          '/detailarticle': (context) => DetailArticle1(),
-          '/chatpage': (context) => HalamanChat(),
-          '/profilepage': (context) => HalamanProfile(),
-          '/eventpage': (context) => EventPage(),
-          '/personalfisioterapi': (context) => PersonalFisioterapisPage(),
-          '/paketPage': (context) => HalamanPaket(),
-          '/riwayatPage': (context) => HalamanRiwayat(),
-        });
+      title: 'Fisiohome',
+      debugShowCheckedModeBanner: false,
+      initialRoute: '/',
+      routes: {
+        '/': (context) => LogoOnlyPage(),
+        '/onboarding': (context) => OnBoarding(),
+        '/authScreen': (context) => StreamBuilder(
+              builder: (context, authSnapshot) {
+                if (authSnapshot.data == null) {
+                  return AuthScreen();
+                } else {
+                  return BottomNav();
+                }
+              },
+              stream: FirebaseAuth.instance.authStateChanges(),
+            ),
+        // Register
+        '/home': (context) => HalamanHome(),
+        '/activitypage': (context) => HalamanActivity(),
+        '/articlepage': (context) => HalamanArticle(),
+        '/detailarticle': (context) => DetailArticle1(),
+        '/chatpage': (context) => HalamanChat(),
+        '/profilepage': (context) => HalamanProfile(),
+        '/eventpage': (context) => EventPage(),
+        '/personalfisioterapi': (context) => PersonalFisioterapisPage(),
+        '/paketPage': (context) => HalamanPaket(),
+        '/riwayatPage': (context) => HalamanRiwayat(),
+      },
+    );
   }
 }
