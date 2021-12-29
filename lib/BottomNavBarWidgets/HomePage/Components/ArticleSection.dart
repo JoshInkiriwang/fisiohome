@@ -1,5 +1,4 @@
 import 'package:FisioHome/BottomNavBarWidgets/ArticlePage/HalamanArticle.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class ArticleSection extends StatelessWidget {
@@ -19,18 +18,26 @@ class ArticleSection extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: EdgeInsets.only(left: 145),
+                padding: EdgeInsets.only(left: 0.0),
                 child: InkWell(
-                  onTap: () => Navigator.push(
+                  onTap: () {
+                    Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => HalamanArticle())),
-                  child: Text(
-                    'See All',
-                    style: TextStyle(
+                        builder: (BuildContext context) => HalamanArticle(),
+                      ),
+                    );
+                  },
+                  child: Padding(
+                    padding: EdgeInsets.only(left: 145.0, top: 4.5),
+                    child: Text(
+                      'See All',
+                      style: TextStyle(
                         fontSize: 13,
                         fontFamily: 'Raleway',
-                        color: Color.fromRGBO(95, 37, 224, 100)),
+                        color: Color.fromRGBO(95, 37, 224, 100),
+                      ),
+                    ),
                   ),
                 ),
               ),

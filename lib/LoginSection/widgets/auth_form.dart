@@ -6,7 +6,7 @@ class AuthForm extends StatefulWidget {
 
   final Function(
       {required String email,
-      required String username,
+      required String fullName,
       required String password,
       required bool isLogin}) submitAuthFormFn;
 
@@ -18,8 +18,10 @@ class _AuthFormState extends State<AuthForm> {
   final _formKey = GlobalKey<FormState>();
   bool _isLogin = true;
 
+  TextEditingController dateCtrl = TextEditingController();
+
   String _email = '';
-  String _username = '';
+  String _fullName = '';
   String _password = '';
 
   void submitForm() {
@@ -28,7 +30,7 @@ class _AuthFormState extends State<AuthForm> {
         _formKey.currentState!.save();
         widget.submitAuthFormFn(
           email: _email,
-          username: _username,
+          fullName: _fullName,
           password: _password,
           isLogin: _isLogin,
         );
@@ -56,28 +58,30 @@ class _AuthFormState extends State<AuthForm> {
               _email = value.toString();
             },
           ),
-          SizedBox(height: 15),
+          SizedBox(
+            height: 20,
+          ),
           if (!_isLogin)
             TextFormField(
-              key: Key('username'),
+              key: Key('fullName'),
               decoration: InputDecoration(
-                labelText: 'Username',
+                labelText: 'Nama Lengkap',
                 border: OutlineInputBorder(),
               ),
               autovalidateMode: AutovalidateMode.onUserInteraction,
               validator: (value) {
-                if (value == null || value.isEmpty || value.length < 5)
-                  return 'Username minimal memiliki 5 karakter';
+                if (value == null || value.isEmpty)
+                  return 'Masukan nama lengkap sesuai identitas anda';
 
                 return null;
               },
               onSaved: (value) {
-                _username = value.toString();
+                _fullName = value.toString();
               },
             ),
           if (!_isLogin)
             SizedBox(
-              height: 15,
+              height: 20,
             ),
           TextFormField(
             key: Key('password'),
@@ -102,6 +106,18 @@ class _AuthFormState extends State<AuthForm> {
           ),
           ElevatedButton(
             onPressed: submitForm,
+            style: ElevatedButton.styleFrom(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10),
+              ),
+              fixedSize: Size(350, 58),
+              primary: Color.fromRGBO(95, 37, 224, 100),
+              textStyle: TextStyle(
+                fontSize: 20,
+                fontFamily: 'Raleway',
+                fontWeight: FontWeight.w700,
+              ),
+            ),
             child: Text(_isLogin ? 'Masuk' : 'Daftar'),
           ),
           SizedBox(
@@ -113,7 +129,13 @@ class _AuthFormState extends State<AuthForm> {
                 _isLogin = !_isLogin;
               });
             },
-            child: Text(_isLogin ? 'Daftar akun baru' : 'Sudah punya akun'),
+            child: Text(
+              _isLogin ? 'Daftar akun baru' : 'Sudah punya akun',
+              style: TextStyle(
+                fontSize: 14,
+                fontFamily: 'Raleway',
+              ),
+            ),
           ),
         ],
       ),

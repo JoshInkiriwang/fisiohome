@@ -16,7 +16,7 @@ class _AuthScreenState extends State<AuthScreen> {
 
   void submitAuthForm(
       {required String email,
-      required String username,
+      required String fullName,
       required String password,
       required bool isLogin}) async {
     try {
@@ -33,7 +33,7 @@ class _AuthScreenState extends State<AuthScreen> {
           await _firebaseFirestore
               .collection('users')
               .doc(userCredential.user!.uid)
-              .set({'username': username, 'email': email});
+              .set({'fullName': fullName, 'email': email});
         }
       }
     } on FirebaseAuthException catch (e) {
@@ -57,14 +57,26 @@ class _AuthScreenState extends State<AuthScreen> {
             child: Column(
               children: [
                 Text(
-                  'Welcome',
-                  style: Theme.of(context)
-                      .textTheme
-                      .headline3!
-                      .copyWith(color: Theme.of(context).primaryColor),
+                  'Selamat Datang',
+                  style: TextStyle(
+                    color: Color.fromRGBO(95, 37, 224, 100),
+                    fontFamily: 'Raleway',
+                    fontWeight: FontWeight.w700,
+                    fontSize: 24,
+                  ),
                 ),
                 SizedBox(
-                  height: 25,
+                  height: 15,
+                ),
+                Text(
+                  'Isi informasi dibawah ini dengan benar',
+                  style: TextStyle(
+                    fontSize: 14,
+                    fontFamily: 'Raleway',
+                  ),
+                ),
+                SizedBox(
+                  height: 35,
                 ),
                 AuthForm(
                   submitAuthFormFn: submitAuthForm,

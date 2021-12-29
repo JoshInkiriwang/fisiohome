@@ -18,7 +18,7 @@ class _HalamanHomeState extends State<HalamanHome> {
       home: Scaffold(
         body: SafeArea(
           child: SingleChildScrollView(
-            child : Column(
+            child: Column(
               children: <Widget>[
                 Container(
                   width: MediaQuery.of(context).size.width,
@@ -26,18 +26,20 @@ class _HalamanHomeState extends State<HalamanHome> {
                     fit: StackFit.loose,
                     alignment: AlignmentDirectional.topCenter,
                     clipBehavior: Clip.none,
-
                     children: <Widget>[
                       Container(
                         height: 226,
                         width: MediaQuery.of(context).size.width,
-                        child: Image.asset('assets/images/HomePage.jpg', fit: BoxFit.cover,),
+                        child: Image.asset(
+                          'assets/images/HomePage.jpg',
+                          fit: BoxFit.cover,
+                        ),
                       ),
-                      SearchBar(),
                       Positioned(
                         top: 200,
                         child: HomeButtonGroup(),
                       ),
+                      SearchBar(),
                     ],
                   ),
                 ),
@@ -46,7 +48,8 @@ class _HalamanHomeState extends State<HalamanHome> {
                   child: FourButton(),
                 ),
                 Container(
-                  margin: EdgeInsets.only(left: 20.0, right: 10.0, bottom: 30.0),
+                  margin:
+                      EdgeInsets.only(left: 20.0, right: 10.0, bottom: 30.0),
                   child: ArticleSection(),
                 ),
                 Container(
@@ -55,7 +58,7 @@ class _HalamanHomeState extends State<HalamanHome> {
                 ),
               ],
             ),
-         ),
+          ),
         ),
       ),
     );

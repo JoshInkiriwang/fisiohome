@@ -4,7 +4,8 @@ class PersonalFisioterapisPage extends StatefulWidget {
   const PersonalFisioterapisPage({Key? key}) : super(key: key);
 
   @override
-  _PersonalFisioterapisPageState createState() => _PersonalFisioterapisPageState();
+  _PersonalFisioterapisPageState createState() =>
+      _PersonalFisioterapisPageState();
 }
 
 class _PersonalFisioterapisPageState extends State<PersonalFisioterapisPage> {
@@ -42,10 +43,9 @@ class _PersonalFisioterapisPageState extends State<PersonalFisioterapisPage> {
           padding: EdgeInsets.only(left: 30.0),
           child: Image.asset('assets/icons/logoFisiohome2.png'),
         ),
-        title: Text('Massage'),
+        title: Text('Personal Fisioterapi'),
         backgroundColor: Color.fromRGBO(95, 37, 224, 100),
       ),
-
       body: Form(
         key: _personalFisioFormKey,
         child: Container(
@@ -126,12 +126,14 @@ class _PersonalFisioterapisPageState extends State<PersonalFisioterapisPage> {
               Container(
                 child: TextButton(
                   onPressed: () {},
-                  child : Text('Lanjutkan Pemesanan', style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 20,
-                    fontWeight: FontWeight.w700,
-                    fontFamily: 'Raleway',
-                   ),
+                  child: Text(
+                    'Lanjutkan Pemesanan',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 20,
+                      fontWeight: FontWeight.w700,
+                      fontFamily: 'Raleway',
+                    ),
                   ),
                   style: TextButton.styleFrom(
                     backgroundColor: Color.fromRGBO(95, 37, 224, 100),

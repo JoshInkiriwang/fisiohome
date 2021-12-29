@@ -96,7 +96,10 @@ class Article1 extends StatelessWidget {
                         color: Color.fromRGBO(150, 150, 150, 100)),
                   ),
                   Padding(
-                    child: Icon(Icons.keyboard_control_rounded),
+                    child: Icon(
+                      Icons.share,
+                      size: 25,
+                    ),
                     padding: EdgeInsets.only(left: 185.0),
                   ),
                 ],
@@ -123,18 +126,7 @@ class Article2 extends StatelessWidget {
               fit: BoxFit.cover,
             ),
           ),
-          SizedBox(height: 5.0),
-          Align(
-            alignment: Alignment(0.96, 0),
-            child: PopupMenuButton<int>(
-              itemBuilder: (context) => [
-                PopupMenuItem(
-                  child: Text('Share'),
-                  value: 1,
-                )
-              ],
-            ),
-          ),
+          SizedBox(height: 20.0),
           Container(
             padding: EdgeInsets.only(left: 15.0, right: 15.0, bottom: 10.0),
             alignment: AlignmentDirectional.centerStart,
@@ -144,10 +136,21 @@ class Article2 extends StatelessWidget {
           Container(
             padding: EdgeInsets.only(left: 15.0, right: 15.0, bottom: 10.0),
             alignment: AlignmentDirectional.centerStart,
-            child: Text(
-              '24 September 2021',
-              style: TextStyle(
-                  fontSize: 13, color: Color.fromRGBO(150, 150, 150, 100)),
+            child: Row(
+              children: [
+                Text(
+                  '24 September 2021',
+                  style: TextStyle(
+                      fontSize: 13, color: Color.fromRGBO(150, 150, 150, 100)),
+                ),
+                Padding(
+                  child: Icon(
+                    Icons.share,
+                    size: 25,
+                  ),
+                  padding: EdgeInsets.only(left: 165.0),
+                ),
+              ],
             ),
           ),
         ],
@@ -170,18 +173,7 @@ class Article3 extends StatelessWidget {
               fit: BoxFit.cover,
             ),
           ),
-          SizedBox(height: 5.0),
-          Align(
-            alignment: Alignment(0.96, 0),
-            child: PopupMenuButton<int>(
-              itemBuilder: (context) => [
-                PopupMenuItem(
-                  child: Text('Share'),
-                  value: 1,
-                )
-              ],
-            ),
-          ),
+          SizedBox(height: 20.0),
           Container(
             padding: EdgeInsets.only(left: 15.0, right: 15.0, bottom: 10.0),
             alignment: AlignmentDirectional.centerStart,
@@ -191,10 +183,21 @@ class Article3 extends StatelessWidget {
           Container(
             padding: EdgeInsets.only(left: 15.0, right: 15.0, bottom: 10.0),
             alignment: AlignmentDirectional.centerStart,
-            child: Text(
-              '08 September 2021',
-              style: TextStyle(
-                  fontSize: 13, color: Color.fromRGBO(150, 150, 150, 100)),
+            child: Row(
+              children: [
+                Text(
+                  '05 September 2021',
+                  style: TextStyle(
+                      fontSize: 13, color: Color.fromRGBO(150, 150, 150, 100)),
+                ),
+                Padding(
+                  child: Icon(
+                    Icons.share,
+                    size: 25,
+                  ),
+                  padding: EdgeInsets.only(left: 165.0),
+                ),
+              ],
             ),
           ),
         ],
