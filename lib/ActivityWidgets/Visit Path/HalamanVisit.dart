@@ -38,224 +38,222 @@ class _HalamanVisitState extends State<HalamanVisit> {
         title: Text('Visit Sekarang'),
         backgroundColor: Color.fromRGBO(95, 37, 224, 100),
       ),
-
       body: Form(
         key: _visitformKey,
         child: Container(
           padding: EdgeInsets.symmetric(vertical: 30.0, horizontal: 30.0),
-            child: SingleChildScrollView(
-              child: Column(
-                children: <Widget>[
-                  //Nama Pasien
-                  TextFormField(
-                    decoration: new InputDecoration(
-                      border: OutlineInputBorder(
-                        borderSide: BorderSide(
-                            color: Color.fromRGBO(217, 223, 229, 100),
-                        ),
-                        borderRadius: BorderRadius.circular(5.0),
+          child: SingleChildScrollView(
+            child: Column(
+              children: <Widget>[
+                //Nama Pasien
+                TextFormField(
+                  decoration: new InputDecoration(
+                    border: OutlineInputBorder(
+                      borderSide: BorderSide(
+                        color: Color.fromRGBO(217, 223, 229, 100),
                       ),
-                      hintText: 'Masukan Nama Lengkap Pasien',
-                      labelText: 'Nama Pasien',
+                      borderRadius: BorderRadius.circular(5.0),
                     ),
+                    hintText: 'Masukan Nama Lengkap Pasien',
+                    labelText: 'Nama Pasien',
                   ),
+                ),
 
-                  SizedBox(height: 15.0),
+                SizedBox(height: 15.0),
 
-                  //Usia Pasien
-                  TextFormField(
-                    decoration: new InputDecoration(
-                      border: OutlineInputBorder(
-                        borderSide: BorderSide(
-                            color: Color.fromRGBO(217, 223, 229, 100),
-                        ),
-                        borderRadius: BorderRadius.circular(5.0),
+                //Usia Pasien
+                TextFormField(
+                  decoration: new InputDecoration(
+                    border: OutlineInputBorder(
+                      borderSide: BorderSide(
+                        color: Color.fromRGBO(217, 223, 229, 100),
                       ),
-                      hintText: 'Masukan Usia Pasien',
-                      labelText: 'Usia Pasien',
+                      borderRadius: BorderRadius.circular(5.0),
                     ),
+                    hintText: 'Masukan Usia Pasien',
+                    labelText: 'Usia Pasien',
                   ),
+                ),
 
-                  SizedBox(height: 15.0),
+                SizedBox(height: 15.0),
 
-                  //Jenis Kelamin
-                  TextFormField(
-                    decoration: new InputDecoration(
-                      border: OutlineInputBorder(
-                        borderSide: BorderSide(
-                            color: Color.fromRGBO(217, 223, 229, 100),
-                        ),
-                        borderRadius: BorderRadius.circular(5.0),
+                //Jenis Kelamin
+                TextFormField(
+                  decoration: new InputDecoration(
+                    border: OutlineInputBorder(
+                      borderSide: BorderSide(
+                        color: Color.fromRGBO(217, 223, 229, 100),
                       ),
-                      hintText: 'Masukan Jenis Kelamin',
-                      labelText: 'Jenis Kelamin',
+                      borderRadius: BorderRadius.circular(5.0),
                     ),
+                    hintText: 'Masukan Jenis Kelamin',
+                    labelText: 'Jenis Kelamin',
                   ),
+                ),
 
-                  SizedBox(height: 15.0),
+                SizedBox(height: 15.0),
 
-                  //Keluhan Utama
-                  TextFormField(
-                    decoration: new InputDecoration(
-                      border: OutlineInputBorder(
-                        borderSide: BorderSide(
-                            color: Color.fromRGBO(217, 223, 229, 100),
-                        ),
-                        borderRadius: BorderRadius.circular(5.0),
+                //Keluhan Utama
+                TextFormField(
+                  decoration: new InputDecoration(
+                    border: OutlineInputBorder(
+                      borderSide: BorderSide(
+                        color: Color.fromRGBO(217, 223, 229, 100),
                       ),
-                      hintText: 'Masukan Keluhan Pasien',
-                      labelText: 'Keluhan Utama',
+                      borderRadius: BorderRadius.circular(5.0),
                     ),
+                    hintText: 'Masukan Keluhan Pasien',
+                    labelText: 'Keluhan Utama',
                   ),
+                ),
 
-                  SizedBox(height: 15.0),
+                SizedBox(height: 15.0),
 
-                  //Keluhan Sejak
-                  TextFormField(
-                    controller: _keluhanSejak,
-                    readOnly: true,
-                    decoration: new InputDecoration(
-                      suffixIcon: Image.asset('assets/icons/IconCalendar.png'),
-                      border: OutlineInputBorder(
-                        borderSide: BorderSide(
-                            color: Color.fromRGBO(217, 223, 229, 100),
-                        ),
-                        borderRadius: BorderRadius.circular(5.0),
+                //Keluhan Sejak
+                TextFormField(
+                  controller: _keluhanSejak,
+                  readOnly: true,
+                  decoration: new InputDecoration(
+                    suffixIcon: Image.asset('assets/icons/IconCalendar.png'),
+                    border: OutlineInputBorder(
+                      borderSide: BorderSide(
+                        color: Color.fromRGBO(217, 223, 229, 100),
                       ),
-                      hintText: 'dd/mm/yyyy',
-                      labelText: 'Keluhan Sejak',
+                      borderRadius: BorderRadius.circular(5.0),
                     ),
-                    onTap: () async {
-                      DateTime? pickedDate = await showDatePicker(
-                        context: context,
-                        initialDate: DateTime.now(),
-                        firstDate: DateTime(2021),
-                        lastDate: DateTime(2100),
-                        cancelText: 'Cancel',
-                      );
-
-                      if (pickedDate != null) {
-                        setState(() {
-                          String formattedDate = DateFormat('dd-MM-yyyy').format(pickedDate);
-                          _keluhanSejak.text = formattedDate;
-                        });
-                      }
-                    },
+                    hintText: 'dd/mm/yyyy',
+                    labelText: 'Keluhan Sejak',
                   ),
+                  onTap: () async {
+                    DateTime? pickedDate = await showDatePicker(
+                      context: context,
+                      initialDate: DateTime.now(),
+                      firstDate: DateTime(2021),
+                      lastDate: DateTime(2100),
+                      cancelText: 'Cancel',
+                    );
 
-                  SizedBox(height: 15.0),
+                    if (pickedDate != null) {
+                      setState(() {
+                        String formattedDate =
+                            DateFormat('dd-MM-yyyy').format(pickedDate);
+                        _keluhanSejak.text = formattedDate;
+                      });
+                    }
+                  },
+                ),
 
-                  //Diagnosa Dokter (Jika Ada)
-                  TextFormField(
-                    decoration: new InputDecoration(
-                      border: OutlineInputBorder(
-                        borderSide: BorderSide(
-                            color: Color.fromRGBO(217, 223, 229, 100),
-                        ),
-                        borderRadius: BorderRadius.circular(5.0),
+                SizedBox(height: 15.0),
+
+                //Diagnosa Dokter (Jika Ada)
+                TextFormField(
+                  decoration: new InputDecoration(
+                    border: OutlineInputBorder(
+                      borderSide: BorderSide(
+                        color: Color.fromRGBO(217, 223, 229, 100),
                       ),
-                      hintText: 'Jika ada',
-                      labelText: 'Diagnosa Dokter',
+                      borderRadius: BorderRadius.circular(5.0),
                     ),
+                    hintText: 'Jika ada',
+                    labelText: 'Diagnosa Dokter',
                   ),
+                ),
 
-                  SizedBox(height: 15.0),
+                SizedBox(height: 15.0),
 
-                  //Kondisi Pasien Sekarang
-                  TextFormField(
-                    decoration: new InputDecoration(
-                      border: OutlineInputBorder(
+                //Kondisi Pasien Sekarang
+                TextFormField(
+                  decoration: new InputDecoration(
+                    border: OutlineInputBorder(
                         borderSide: BorderSide(
-                            color: Color.fromRGBO(217, 223, 229, 100)
-                        ),
-                        borderRadius: BorderRadius.circular(5.0)
-                      ),
-                      hintText: 'Tirah Baring / Normal / Hanya Bisa Duduk',
-                      labelText: 'Nama Pasien',
-                    ),
+                            color: Color.fromRGBO(217, 223, 229, 100)),
+                        borderRadius: BorderRadius.circular(5.0)),
+                    hintText: 'Tirah Baring / Normal / Hanya Bisa Duduk',
+                    labelText: 'Nama Pasien',
                   ),
+                ),
 
-                  SizedBox(height: 15.0),
+                SizedBox(height: 15.0),
 
-                  //Permintaan Khusus
-                  TextFormField(
-                    decoration: new InputDecoration(
-                      suffixIcon: Icon(
-                        Icons.keyboard_arrow_down_rounded,
-                        size: 45.0,
-                        color: Color.fromRGBO(68, 105, 132, 100),
-                      ),
-                      border: OutlineInputBorder(
+                //Permintaan Khusus
+                TextFormField(
+                  decoration: new InputDecoration(
+                    suffixIcon: Icon(
+                      Icons.keyboard_arrow_down_rounded,
+                      size: 45.0,
+                      color: Color.fromRGBO(68, 105, 132, 100),
+                    ),
+                    border: OutlineInputBorder(
                         borderSide: BorderSide(
-                            color: Color.fromRGBO(217, 223, 229, 100)
-                        ),
-                        borderRadius: BorderRadius.circular(5.0)
-                      ),
-                      hintText: 'Drop Down Bar',
-                      labelText: 'Permintaan Khusus',
-                    ),
+                            color: Color.fromRGBO(217, 223, 229, 100)),
+                        borderRadius: BorderRadius.circular(5.0)),
+                    hintText: 'Drop Down Bar',
+                    labelText: 'Permintaan Khusus',
                   ),
+                ),
 
-                  SizedBox(height: 15.0),
+                SizedBox(height: 15.0),
 
-                  //Pilih Tanggal Terapi
-                  TextFormField(
-                    controller: _tanggalTerapi,
-                    readOnly: true,
-                    decoration: new InputDecoration(
-                      suffixIcon: Image.asset('assets/icons/IconCalendar.png'),
-                      border: OutlineInputBorder(
+                //Pilih Tanggal Terapi
+                TextFormField(
+                  controller: _tanggalTerapi,
+                  readOnly: true,
+                  decoration: new InputDecoration(
+                    suffixIcon: Image.asset('assets/icons/IconCalendar.png'),
+                    border: OutlineInputBorder(
                         borderSide: BorderSide(
                           color: Color.fromRGBO(217, 223, 229, 100),
                         ),
-                        borderRadius: BorderRadius.circular(5.0)
-                      ),
-                      hintText: 'Date Pop Up',
-                      labelText: 'Pilih Tanggal Terapi',
-                    ),
-                    onTap: () async {
-                      DateTime? pickedDate = await showDatePicker(
-                        context: context,
-                        initialDate: DateTime.now(),
-                        firstDate: DateTime.now(),
-                        lastDate: DateTime(2100),
-                        cancelText: 'Cancel',
-                      );
-
-                      if (pickedDate != null) {
-                        setState(() {
-                          String formattedDate = DateFormat('dd-MM-yyyy').format(pickedDate);
-                          _tanggalTerapi.text = formattedDate;
-                        });
-                      }
-                    },
+                        borderRadius: BorderRadius.circular(5.0)),
+                    hintText: 'Date Pop Up',
+                    labelText: 'Pilih Tanggal Terapi',
                   ),
+                  onTap: () async {
+                    DateTime? pickedDate = await showDatePicker(
+                      context: context,
+                      initialDate: DateTime.now(),
+                      firstDate: DateTime.now(),
+                      lastDate: DateTime(2100),
+                      cancelText: 'Cancel',
+                    );
 
-                  SizedBox(height: 15.0),
+                    if (pickedDate != null) {
+                      setState(() {
+                        String formattedDate =
+                            DateFormat('dd-MM-yyyy').format(pickedDate);
+                        _tanggalTerapi.text = formattedDate;
+                      });
+                    }
+                  },
+                ),
 
-                  //Tombol "Lanjutkan Pemesanan"
-                  Container(
-                    child: TextButton(
-                      onPressed: () {},
-                      child : Text('Lanjutkan Pemesanan', style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 20,
-                          fontWeight: FontWeight.w700,
-                          fontFamily: 'Raleway',
-                        ),
-                      ),
-                      style: TextButton.styleFrom(
-                        backgroundColor: Color.fromRGBO(95, 37, 224, 100),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                        minimumSize: Size(328.0, 58.0),
+                SizedBox(height: 15.0),
+
+                //Tombol "Lanjutkan Pemesanan"
+                Container(
+                  child: TextButton(
+                    onPressed: () {},
+                    child: Text(
+                      'Lanjutkan Pemesanan',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20,
+                        fontWeight: FontWeight.w700,
+                        fontFamily: 'Raleway',
                       ),
                     ),
+                    style: TextButton.styleFrom(
+                      backgroundColor: Color.fromRGBO(95, 37, 224, 100),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      minimumSize: Size(328.0, 58.0),
+                    ),
                   ),
-                ],
-              ),
+                ),
+              ],
             ),
+          ),
         ),
       ),
     );
